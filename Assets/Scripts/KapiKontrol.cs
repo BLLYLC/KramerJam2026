@@ -5,12 +5,16 @@ public class KapiKontrol : MonoBehaviour
     private bool oyuncuAlanda = false;
     private bool kapiAcik = false;
 
+    [Header("Ses Ayarlarý")]
+    public AudioSource sesKaynagi;
+    public AudioClip kapiacses;
+    public AudioClip kapikapatses;
+
     [Header("Kapý Ayarlarý")]
-    public float acilmaAcisi = -90f; // 2D'de açýlma yönüne göre 90 veya -90 yapabilirsin
+    public float acilmaAcisi = -90f;
     public float donmeHizi = 5f;
 
     [Header("Bileþen Baðlantýsý")]
-    // public yaparak Inspector'da kesinlikle görünmesini saðlýyoruz
     public Collider2D kapiDuvarCollider;
 
     private Quaternion hedefRotasyon;
@@ -43,12 +47,12 @@ public class KapiKontrol : MonoBehaviour
 
         if (kapiAcik)
         {
-            // 2D oyunlarda dönüþ Z ekseni üzerinden yapýlýr
             hedefRotasyon = kapaliRotasyon * Quaternion.Euler(0, 0, acilmaAcisi);
 
             if (kapiDuvarCollider != null)
             {
                 kapiDuvarCollider.isTrigger = true; // Engeli kaldýr
+                sesKaynagi.PlayOneShot(kapiacses);
             }
         }
         else
@@ -58,6 +62,7 @@ public class KapiKontrol : MonoBehaviour
             if (kapiDuvarCollider != null)
             {
                 kapiDuvarCollider.isTrigger = false; // Engeli geri koy
+                sesKaynagi.PlayOneShot(kapikapatses);
             }
         }
     }
@@ -71,7 +76,7 @@ public class KapiKontrol : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other) // Küçük yazým hatasýný düzelterek Collider2D yapýyoruz
+    private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
