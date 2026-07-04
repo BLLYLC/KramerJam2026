@@ -231,5 +231,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88943374e929b4746a81e4c002d91e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DusmanSaldiri
-  takipHizi: 2
+  takipHizi: 4
   saniyelikHasar: 10

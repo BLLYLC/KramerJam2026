@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.Events;
 
 public class BebekMekanigi : MonoBehaviour
@@ -29,7 +30,7 @@ public class BebekMekanigi : MonoBehaviour
     public bool dusmanBekleniyor = false;
 
     [Header("Dusman Sistemi")]
-    public DusmanDavranisi baglidusman;
+    public List <DusmanDavranisi> baglidusmanlar = new List<DusmanDavranisi>(); 
 
     [Header("Oyun Ici Tetikleyiciler")]
     public UnityEvent DogruKoyuldugunda;
@@ -94,14 +95,18 @@ public class BebekMekanigi : MonoBehaviour
     {
         Debug.Log("3 YANLIS YAPILDI! Sistem kilitlendi, dusman cagiriliyor.");
         dusmanBekleniyor = true;
-        if (baglidusman != null)
+        foreach (DusmanDavranisi dusman in baglidusmanlar)
         {
-            baglidusman.YenidenCanlandir();
+            if (baglidusmanlar != null)
+            {
+                dusman.YenidenCanlandir();
+            }
+            else
+            {
+                Debug.LogWarning("DIKKAT: Bagli dusman atanmamis ama sistem kilitlendi!");
+            }
         }
-        else
-        {
-            Debug.LogWarning("DIKKAT: Bagli dusman atanmamis ama sistem kilitlendi!");
-        }
+        
     }
 
     public void DusmanYenildi()

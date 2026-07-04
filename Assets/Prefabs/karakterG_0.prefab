@@ -185,6 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3338d4bd87e274db6b0d46b49b0da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KarakterDovus
+  sesKaynagi: {fileID: 0}
+  normalVurusSesi: {fileID: 0}
+  bitiriciVurusSesi: {fileID: 0}
   saldiriNoktasi: {fileID: 4878802612146010542}
   saldiriCapi: 0.5
   dusmanKatmani:
@@ -192,7 +195,7 @@ MonoBehaviour:
     m_Bits: 64
   normalHasar: 10
   komboHasar: 20
-  komboFirlama: 12
+  komboFirlama: 6
   "komboS\xFCresi": 1
 --- !u!1 &6601464772414187929
 GameObject:

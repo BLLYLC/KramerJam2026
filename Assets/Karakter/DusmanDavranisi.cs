@@ -47,6 +47,6 @@ public class DusmanDavranisi : MonoBehaviour
         transform.localPosition = baslangicPozisyonu;
         mevcutCan = azamiCan;
         gameObject.SetActive(true);
-        Debug.Log(gameObject.name + " yeniden canland�!");
+        Debug.Log(gameObject.name + " yeniden canland�");
     }
 }
