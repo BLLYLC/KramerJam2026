@@ -1,47 +1,129 @@
 using UnityEngine;
-using UnityEngine.Events; 
+using UnityEngine.Events;
 
 public class BebekMekanigi : MonoBehaviour
 {
-    // --- SİNGLETON (MUHTAR) KISMI ---
     public static BebekMekanigi instance;
+
+    [Header("Mekanik Ayarlari")]
+    [Range(0f, 100f)] 
+    public float basariOlasiligi = 30f; 
+    public float minimumOlasilik = 5f;
+    public float maksimumOlasilik = 100f;
+    public float ikiSaniyedeDusenMiktar = 2f;
+
+    [Header("Oyun Asamalari")]
+    public int mevcutSekil = 0;
+    public int kazanmakIcinGerekenSekil = 5;
+    public int toplamYanlisSayisi = 0;
+
+    [Header("Zamanlayicilar")]
+    public float hamleSuresi = 5f;
+    private float hamleSayaci = 0f;
+    
+    public float sansDusmeSuresi = 2f;
+    private float sansDusmeSayaci = 0f;
+
+    [Header("Sistem Durumu")]
+    public bool oyunBitti = false;
+    public bool dusmanBekleniyor = false;
+
+    [Header("Dusman Sistemi")]
+    public DusmanDavranisi baglidusman;
+
+    [Header("Oyun Ici Tetikleyiciler")]
+    public UnityEvent DogruKoyuldugunda;
+    public UnityEvent YanlisKoyuldugunda;
+    public UnityEvent OyunKazanildiginda;
 
     private void Awake() 
     { 
         instance = this; 
     }
 
-    // --- MEKANİK AYARLARI ---
-    [Header("Mekanik Ayarları")]
-    [Tooltip("Bebeğin bloğu doğru yerine koyma olasılığı (0-100 arası)")]
-    [Range(0f, 100f)] 
-    public float basariOlasiligi = 30f; 
+    private void Update()
+    {
+        if (oyunBitti || dusmanBekleniyor) return;
 
-    [Header("Oyun İçi Tetikleyiciler")]
-    public UnityEvent DogruKoyuldugunda;
-    public UnityEvent YanlisKoyuldugunda;
+        sansDusmeSayaci += Time.deltaTime;
+        if (sansDusmeSayaci >= sansDusmeSuresi)
+        {
+            sansDusmeSayaci = 0f;
+            OlasiligiDegistir(-ikiSaniyedeDusenMiktar);
+        }
+
+        hamleSayaci += Time.deltaTime;
+        if (hamleSayaci >= hamleSuresi)
+        {
+            hamleSayaci = 0f;
+            BlokKoymayiDene();
+        }
+    }
 
     [ContextMenu("Zar At")]
     public void BlokKoymayiDene()
     {
         float cekilenSayi = Random.Range(0f, 100f);
+        Debug.Log("BEBEK HAMLE YAPIYOR... Sansi: %" + basariOlasiligi + " | Cekilen Zar: " + cekilenSayi);
 
         if (cekilenSayi <= basariOlasiligi)
         {
-            Debug.Log("BAŞARILI! Bebek bloğu doğru soktu. Çekilen sayı: " + cekilenSayi);
+            mevcutSekil++;
+            Debug.Log("BASARILI! Bebek " + mevcutSekil + ". sekli koydu.");
             DogruKoyuldugunda.Invoke(); 
+
+            if (mevcutSekil >= kazanmakIcinGerekenSekil)
+            {
+                TumOyunuKazan();
+            }
         }
         else
         {
-            Debug.Log("YANLIŞ! Bebek bloğu sokamadı. Çekilen sayı: " + cekilenSayi);
+            toplamYanlisSayisi++;
+            Debug.Log("HATA! Bebek sekli koyamadi. Toplam Yanlis: " + toplamYanlisSayisi);
             YanlisKoyuldugunda.Invoke(); 
+
+            if (toplamYanlisSayisi % 3 == 0)
+            {
+                DusmanCagirVeBekle();
+            }
         }
+    }
+
+    private void DusmanCagirVeBekle()
+    {
+        Debug.Log("3 YANLIS YAPILDI! Sistem kilitlendi, dusman cagiriliyor.");
+        dusmanBekleniyor = true;
+        if (baglidusman != null)
+        {
+            baglidusman.YenidenCanlandir();
+        }
+        else
+        {
+            Debug.LogWarning("DIKKAT: Bagli dusman atanmamis ama sistem kilitlendi!");
+        }
+    }
+
+    public void DusmanYenildi()
+    {
+        Debug.Log("DUSMAN YENILDI! Bebek kilidi acildi, sekiller sifirlandi.");
+        dusmanBekleniyor = false; 
+        mevcutSekil = 0;          
+        hamleSayaci = 0f;         
+        sansDusmeSayaci = 0f;
     }
 
     public void OlasiligiDegistir(float miktar)
     {
         basariOlasiligi += miktar;
-        basariOlasiligi = Mathf.Clamp(basariOlasiligi, 0f, 100f);
-        Debug.Log("Yeni Başarı Olasılığı: %" + basariOlasiligi);
+        basariOlasiligi = Mathf.Clamp(basariOlasiligi, minimumOlasilik, maksimumOlasilik);
+        Debug.Log("SANS GUNCELLEMESI! Yeni Sans: %" + basariOlasiligi);
+    }
+
+    private void TumOyunuKazan()
+    {
+        Debug.Log("MUKEMMEL! Bebek tüm sekilleri bitirdi ve OYUN KAZANILDI!");
+        oyunBitti = true;
+        OyunKazanildiginda.Invoke();
     }
 }
