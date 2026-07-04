@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class KapiKontrol : MonoBehaviour
 {
-    private bool oyuncuAlanda = false; 
-    private bool kapiAcik = false;     
+    private bool oyuncuAlanda = false;
+    private bool kapiAcik = false;
 
     [Header("Kapý Ayarlarý")]
-    public float acilmaAcisi = 90f;   
-    public float donmeHizi = 5f;      
+    public float acilmaAcisi = -90f; // 2D'de açýlma yönüne göre 90 veya -90 yapabilirsin
+    public float donmeHizi = 5f;
+
+    [Header("Bileþen Baðlantýsý")]
+    // public yaparak Inspector'da kesinlikle görünmesini saðlýyoruz
+    public Collider2D kapiDuvarCollider;
 
     private Quaternion hedefRotasyon;
     private Quaternion kapaliRotasyon;
@@ -16,6 +20,11 @@ public class KapiKontrol : MonoBehaviour
     {
         kapaliRotasyon = transform.rotation;
         hedefRotasyon = kapaliRotasyon;
+
+        if (kapiDuvarCollider == null)
+        {
+            kapiDuvarCollider = GetComponent<Collider2D>();
+        }
     }
 
     void Update()
@@ -24,32 +33,45 @@ public class KapiKontrol : MonoBehaviour
         {
             KapiyiTetikle();
         }
+
         transform.rotation = Quaternion.Slerp(transform.rotation, hedefRotasyon, Time.deltaTime * donmeHizi);
     }
+
     void KapiyiTetikle()
     {
-        kapiAcik = !kapiAcik; // Açýk ise kapalý, kapalý ise açýk yap
+        kapiAcik = !kapiAcik;
 
         if (kapiAcik)
         {
-            // Y ekseninde (yukarý doðru) baþlangýç açýsýna belirlenen dereceyi ekle
-            hedefRotasyon = kapaliRotasyon * Quaternion.Euler(0, acilmaAcisi, 0);
+            // 2D oyunlarda dönüþ Z ekseni üzerinden yapýlýr
+            hedefRotasyon = kapaliRotasyon * Quaternion.Euler(0, 0, acilmaAcisi);
+
+            if (kapiDuvarCollider != null)
+            {
+                kapiDuvarCollider.isTrigger = true; // Engeli kaldýr
+            }
         }
         else
         {
-            // Hedefi tekrar eski orijinal haline getir
             hedefRotasyon = kapaliRotasyon;
+
+            if (kapiDuvarCollider != null)
+            {
+                kapiDuvarCollider.isTrigger = false; // Engeli geri koy
+            }
         }
     }
-    private void OnTriggerEnter(Collider other)
+
+    // 2D Tetikleyiciler
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             oyuncuAlanda = true;
-            // Buraya ekrana "E tuþuna bas" yazdýracak UI kodlarý gelebilir.
         }
     }
-    private void OnTriggerExit(Collider other)
+
+    private void OnTriggerExit2D(Collider2D other) // Küçük yazým hatasýný düzelterek Collider2D yapýyoruz
     {
         if (other.CompareTag("Player"))
         {
