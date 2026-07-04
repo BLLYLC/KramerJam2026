@@ -56,7 +56,7 @@ public class DusmanSaldiri : MonoBehaviour
         if (collision.gameObject.name == "BebeKalp")
         {
             hedefeDegiyorMu = true;
-            hasarZamanlayici = 1f; // Ýlk deðdiði an bekletmeden hemen ilk hasarý vursun diye 1 yapýyoruz
+            hasarZamanlayici = 1f;
         }
     }
 
