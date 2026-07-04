@@ -12,7 +12,7 @@ public class DusmanDavranisi : MonoBehaviour
     void Start()
     {
         gameObject.SetActive(false);
-        Debug.Log(gameObject.name + " öldü ve deaktif edildi.");
+        Debug.Log(gameObject.name + " ï¿½ldï¿½ ve deaktif edildi.");
 
         rb = GetComponent<Rigidbody2D>();
         baslangicPozisyonu = transform.localPosition;
@@ -22,7 +22,7 @@ public class DusmanDavranisi : MonoBehaviour
     public void HasarAl(int hasarMiktari, Vector2 firlamaYonu, float firlamaKuvveti)
     {
         mevcutCan -= hasarMiktari;
-        Debug.Log($"Düþman {hasarMiktari} kadar hasar aldý, kalan caný: {mevcutCan}");
+        Debug.Log($"Dï¿½ï¿½man {hasarMiktari} kadar hasar aldï¿½, kalan canï¿½: {mevcutCan}");
 
         if (firlamaKuvveti > 0)
         {
@@ -38,7 +38,8 @@ public class DusmanDavranisi : MonoBehaviour
     void Ol()
     {
         gameObject.SetActive(false);
-        Debug.Log(gameObject.name + " öldü ve deaktif edildi.");
+        Debug.Log(gameObject.name + " ï¿½ldï¿½ ve deaktif edildi.");
+        BebekMekanigi.instance.DusmanYenildi();
     }
 
     public void YenidenCanlandir()
@@ -46,6 +47,6 @@ public class DusmanDavranisi : MonoBehaviour
         transform.localPosition = baslangicPozisyonu;
         mevcutCan = azamiCan;
         gameObject.SetActive(true);
-        Debug.Log(gameObject.name + " yeniden canlandý!");
+        Debug.Log(gameObject.name + " yeniden canlandï¿½!");
     }
 }
