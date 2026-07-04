@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class KarakterDovus : MonoBehaviour
 {
+    [Header("Ses Ayarlarý")]
+    public AudioSource sesKaynagi;
+    public AudioClip normalVurusSesi;
+    public AudioClip bitiriciVurusSesi;
+
     [Header("SaldiriAyarlari")]
     public Transform saldiriNoktasi;
     public float saldiriCapi = 0.5f;
@@ -38,6 +43,18 @@ public class KarakterDovus : MonoBehaviour
         {
             comboSayaci = 1;
         }
+        // ses efektleri
+        if (sesKaynagi != null)
+        {
+            if (comboSayaci == 3)
+            {
+                sesKaynagi.PlayOneShot(bitiriciVurusSesi);
+            }
+            else
+            {
+                sesKaynagi.PlayOneShot(normalVurusSesi);
+            }
+        }
 
         Collider2D[] vurulanDusmanlar = Physics2D.OverlapCircleAll(saldiriNoktasi.position, saldiriCapi, dusmanKatmani);
 
@@ -51,16 +68,19 @@ public class KarakterDovus : MonoBehaviour
 
                 if (comboSayaci == 3)
                 {
-                    // 3. Vuruþ: Kombo hasarý ver ve GERÝYE FIRLAT
+                    // 3. Vuruþ: Kombo hasarý ver ve geriye fýrlat
                     dusman.HasarAl(komboHasar, firlamaYonu, komboFirlama);
-                    comboSayaci = 0; // Komboyu sýfýrla
                 }
                 else
                 {
-                    // 1. ve 2. Vuruþ: Sadece normal hasar ver, fýrlatma gücü 0 olsun
+                    // 1. ve 2. Vuruþ: Sadece normal hasar ver, fýrlatma gücü 0
                     dusman.HasarAl(normalHasar, Vector2.zero, 0f);
                 }
             }
+        }
+        if (comboSayaci == 3)
+        {
+            comboSayaci = 0;
         }
     }
 
