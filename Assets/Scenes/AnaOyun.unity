@@ -137,11 +137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7983168
+      value: -1.28
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6837952
+      value: 2.61
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.z
@@ -197,6 +197,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163741686535110483, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1432293227751149970, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878804474078167195, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878804474078167195, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878804474078167195, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3185384344586038430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689908135686100884, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689908135686100884, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689908135686100884, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3827765906222105170, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5021777247733485736, guid: b3ff08084c070e14d9881e566087c796, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.72848
@@ -237,14 +277,112 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5461529538734769430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.b
+      value: 0.2245282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461529538734769430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.g
+      value: 0.2245282
+      objectReference: {fileID: 0}
+    - target: {fileID: 5461529538734769430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352986324318237182, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: oyuncuHareketKodu
+      value: 
+      objectReference: {fileID: 2141178825}
+    - target: {fileID: 6352986324318237182, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: yemekMinigameEkrani
+      value: 
+      objectReference: {fileID: 1666362149}
+    - target: {fileID: 6352986324318237182, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: gerekenSallamaHedefi
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6352986324318237182, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: toplamSallamaMiktari
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972992296797478711, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972992296797478711, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972992296797478711, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536651024480329260, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536651024480329260, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7536651024480329260, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590447229631846944, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590447229631846944, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590447229631846944, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313951984398082816, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470445394217443004, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470445394217443004, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470445394217443004, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 8791008373730101077, guid: b3ff08084c070e14d9881e566087c796, type: 3}
       propertyPath: m_Name
       value: YemekMinigamePaketi
       objectReference: {fileID: 0}
+    - target: {fileID: 8874300032768404616, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874300032768404616, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8874300032768404616, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7371883053163856743, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1125492495}
+    - targetCorrespondingSourceObject: {fileID: 3185384344586038430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 859652550}
   m_SourcePrefab: {fileID: 100100000, guid: b3ff08084c070e14d9881e566087c796, type: 3}
 --- !u!1 &169298723
 GameObject:
@@ -736,6 +874,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &859652548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3185384344586038430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+  m_PrefabInstance: {fileID: 157974090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &859652550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859652548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171e32ad08a54c74cacb8fd4fcef7558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TavaSallama
+  minigameManager: {fileID: 1125492493}
+  sallamaEsigi: 15
 --- !u!1 &909237217
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +971,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261906251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1125492492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7371883053163856743, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+  m_PrefabInstance: {fileID: 157974090}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1125492493 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6352986324318237182, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+  m_PrefabInstance: {fileID: 157974090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125492492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca05e82054b21584ba1041ed5b6cc25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::YemekMinigameManager
+--- !u!114 &1125492495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125492492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  kazanmaEtkisi: 15
+  kaybetmeEtkisi: -10
 --- !u!1001 &1349053215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -936,6 +1123,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+--- !u!1 &1666362149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 163741686535110483, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+  m_PrefabInstance: {fileID: 157974090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1801586982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1362,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261906251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2141178825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4878441587352419386, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
+  m_PrefabInstance: {fileID: 63913996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c5f1cd44d00ba42b90c3aeff638980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KarakterHareket
 --- !u!1 &2145183054
 GameObject:
   m_ObjectHideFlags: 0
