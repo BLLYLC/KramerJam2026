@@ -2,18 +2,32 @@ using UnityEngine;
 
 public class TavaSallama : MonoBehaviour
 {
-    [Header("Sistem Bağlantısı")]
+    [Header("Sistem Baglantisi")]
     public YemekMinigameManager minigameManager;
     
     public float sallamaEsigi = 15f; 
 
     private Vector3 tavaBaslangicPozisyonu;
+    private bool baslangicAlindi = false;
     private float sonFareY;
     private int sonSallamaYonu = 0; 
 
-    private void Start()
+    private void Awake()
     {
-        tavaBaslangicPozisyonu = transform.position;
+        if (!baslangicAlindi)
+        {
+            tavaBaslangicPozisyonu = transform.position;
+            baslangicAlindi = true;
+        }
+    }
+
+    private void OnEnable()
+    {
+        if (baslangicAlindi)
+        {
+            transform.position = tavaBaslangicPozisyonu;
+            sonSallamaYonu = 0;
+        }
     }
 
     private void OnMouseDown()

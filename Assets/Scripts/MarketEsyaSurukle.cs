@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class MalzemeSurukle : MonoBehaviour
+public class MarketEsyaSurukle : MonoBehaviour
 {
+    public AburCuburTipi urunTipi;
+    public MarketMinigameManager minigameManager;
+
     private Vector3 baslangicPozisyonu;
     private bool baslangicAlindi = false;
-    private bool tavaninUstundeMi = false;
+    private bool sepetinUstundeMi = false;
     private SpriteRenderer gorunum;
     private Collider2D fizikKutusu;
-    
-    [Header("Sistem Baglantisi")]
-    public YemekMinigameManager minigameManager;
 
     private void Awake()
     {
@@ -25,16 +25,17 @@ public class MalzemeSurukle : MonoBehaviour
     private void OnMouseDrag()
     {
         Vector3 farePozisyonu = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(farePozisyonu.x, farePozisyonu.y, baslangicPozisyonu.z);
+        farePozisyonu.z = 0f;
+        transform.position = farePozisyonu;
     }
 
     private void OnMouseUp()
     {
-        if (tavaninUstundeMi)
+        if (sepetinUstundeMi)
         {
-            minigameManager.MalzemeEklendi(); 
             gorunum.enabled = false;
             fizikKutusu.enabled = false;
+            minigameManager.SepeteEklendi(urunTipi);
         }
         else
         {
@@ -44,28 +45,28 @@ public class MalzemeSurukle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Tava"))
+        if (other.CompareTag("Sepet"))
         {
-            tavaninUstundeMi = true;
+            sepetinUstundeMi = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Tava"))
+        if (other.CompareTag("Sepet"))
         {
-            tavaninUstundeMi = false;
+            sepetinUstundeMi = false;
         }
     }
 
-    public void MalzemeyiSifirla()
+    public void EsyayiSifirla()
     {
         if (!baslangicAlindi)
         {
             baslangicPozisyonu = transform.position;
             baslangicAlindi = true;
         }
-        tavaninUstundeMi = false;
+        sepetinUstundeMi = false;
         transform.position = baslangicPozisyonu;
         if (gorunum == null) gorunum = GetComponent<SpriteRenderer>();
         if (fizikKutusu == null) fizikKutusu = GetComponent<Collider2D>();
