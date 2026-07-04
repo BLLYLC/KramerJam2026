@@ -7,9 +7,15 @@ public class DusmanDavranisi : MonoBehaviour
     public int azamiCan = 100;
     private int mevcutCan;
 
+    private Vector3 baslangicPozisyonu;
+
     void Start()
     {
+        gameObject.SetActive(false);
+        Debug.Log(gameObject.name + " öldü ve deaktif edildi.");
+
         rb = GetComponent<Rigidbody2D>();
+        baslangicPozisyonu = transform.localPosition;
         mevcutCan = azamiCan;
     }
 
@@ -31,7 +37,15 @@ public class DusmanDavranisi : MonoBehaviour
 
     void Ol()
     {
-        Debug.Log("Düþman öldü!");
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        Debug.Log(gameObject.name + " öldü ve deaktif edildi.");
+    }
+
+    public void YenidenCanlandir()
+    {
+        transform.localPosition = baslangicPozisyonu;
+        mevcutCan = azamiCan;
+        gameObject.SetActive(true);
+        Debug.Log(gameObject.name + " yeniden canlandý!");
     }
 }
