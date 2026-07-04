@@ -843,6 +843,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BebekSistem
       objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: baglidusman
+      value: 
+      objectReference: {fileID: 1819770452}
     - target: {fileID: 7799445147514774618, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.72848
@@ -1037,6 +1041,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261906251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1819770452 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8661812053481803914, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+  m_PrefabInstance: {fileID: 6915646478646810312}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eac36b19e29bf74682db3e980343b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DusmanDavranisi
 --- !u!1 &2085331016
 GameObject:
   m_ObjectHideFlags: 0
