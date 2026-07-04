@@ -3,14 +3,23 @@ using UnityEngine;
 public class MalzemeSurukle : MonoBehaviour
 {
     private Vector3 baslangicPozisyonu;
+    private bool baslangicAlindi = false;
     private bool tavaninUstundeMi = false;
+    private SpriteRenderer gorunum;
+    private Collider2D fizikKutusu;
     
-    [Header("Sistem Bağlantısı")]
+    [Header("Sistem Baglantisi")]
     public YemekMinigameManager minigameManager;
 
-    private void Start()
+    private void Awake()
     {
-        baslangicPozisyonu = transform.position; 
+        gorunum = GetComponent<SpriteRenderer>();
+        fizikKutusu = GetComponent<Collider2D>();
+        if (!baslangicAlindi)
+        {
+            baslangicPozisyonu = transform.position;
+            baslangicAlindi = true;
+        }
     }
 
     private void OnMouseDrag()
@@ -24,9 +33,9 @@ public class MalzemeSurukle : MonoBehaviour
     {
         if (tavaninUstundeMi)
         {
-            Debug.Log(gameObject.name + " tavaya eklendi!");
             minigameManager.MalzemeEklendi(); 
-            gameObject.SetActive(false); 
+            gorunum.enabled = false;
+            fizikKutusu.enabled = false;
         }
         else
         {
@@ -48,5 +57,20 @@ public class MalzemeSurukle : MonoBehaviour
         {
             tavaninUstundeMi = false;
         }
+    }
+
+    public void MalzemeyiSifirla()
+    {
+        if (!baslangicAlindi)
+        {
+            baslangicPozisyonu = transform.position;
+            baslangicAlindi = true;
+        }
+        tavaninUstundeMi = false;
+        transform.position = baslangicPozisyonu;
+        if (gorunum == null) gorunum = GetComponent<SpriteRenderer>();
+        if (fizikKutusu == null) fizikKutusu = GetComponent<Collider2D>();
+        gorunum.enabled = true;
+        fizikKutusu.enabled = true;
     }
 }
