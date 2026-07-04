@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6699758136751097760}
   - component: {fileID: 7850053046193420812}
   - component: {fileID: 8661812053481803914}
+  - component: {fileID: 941873937865132749}
   m_Layer: 6
   m_Name: dusman_0
   m_TagString: Untagged
@@ -171,3 +172,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DusmanDavranisi
   azamiCan: 100
+--- !u!114 &941873937865132749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2668368511203706498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88943374e929b4746a81e4c002d91e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DusmanSaldiri
+  takipHizi: 2
+  saniyelikHasar: 10
