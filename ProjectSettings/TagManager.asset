@@ -7,6 +7,8 @@ TagManager:
   - Tava
   - Sepet
   - MinigameSepet
+  - CopKovasi
+  - Zemin
   layers:
   - Default
   - TransparentFX
