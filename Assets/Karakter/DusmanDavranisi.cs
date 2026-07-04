@@ -9,6 +9,9 @@ public class DusmanDavranisi : MonoBehaviour
 
     private Vector3 baslangicPozisyonu;
 
+    [Header("Sersemleme Ayarları")]
+    public float sersemlemeSuresi = 0.5f;
+
     void Start()
     {
         gameObject.SetActive(false);
@@ -24,14 +27,23 @@ public class DusmanDavranisi : MonoBehaviour
         mevcutCan -= hasarMiktari;
         Debug.Log($"D��man {hasarMiktari} kadar hasar ald�, kalan can�: {mevcutCan}");
 
-        if (firlamaKuvveti > 0)
+        if (firlamaKuvveti > 0 && rb != null)
         {
             rb.linearVelocity = firlamaYonu * firlamaKuvveti;
+            CancelInvoke("Toparlan");
+            Invoke("Toparlan", sersemlemeSuresi);
         }
 
         if (mevcutCan <= 0)
         {
             Ol();
+        }
+    }
+    void Toparlan()
+    {
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
         }
     }
 
