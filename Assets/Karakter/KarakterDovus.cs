@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class KarakterDovus : MonoBehaviour
@@ -58,22 +59,26 @@ public class KarakterDovus : MonoBehaviour
 
         Collider2D[] vurulanDusmanlar = Physics2D.OverlapCircleAll(saldiriNoktasi.position, saldiriCapi, dusmanKatmani);
 
+        List<DusmanDavranisi> buSaldiridaHasarAlanlar = new List<DusmanDavranisi>();
+
         foreach (Collider2D dusmanCollider in vurulanDusmanlar)
         {
             DusmanDavranisi dusman = dusmanCollider.GetComponent<DusmanDavranisi>();
 
-            if (dusman != null)
+            if (dusman != null && !buSaldiridaHasarAlanlar.Contains(dusman))
             {
+                buSaldiridaHasarAlanlar.Add(dusman);
+
                 Vector2 firlamaYonu = (dusman.transform.position - transform.position).normalized;
 
                 if (comboSayaci == 3)
                 {
-                    // 3. Vuruþ: Kombo hasarý ver ve geriye fýrlat
+                    // 3. Vuruþ: Kombo hasarý verme ve fýrlatma
                     dusman.HasarAl(komboHasar, firlamaYonu, komboFirlama);
                 }
                 else
                 {
-                    // 1. ve 2. Vuruþ: Sadece normal hasar ver, fýrlatma gücü 0
+                    // 1. ve 2. Vuruþ, sadece hasar
                     dusman.HasarAl(normalHasar, Vector2.zero, 0f);
                 }
             }

@@ -1378,6 +1378,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+--- !u!1 &1640489814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2668368511203706498, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+  m_PrefabInstance: {fileID: 6915646478646810312}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666362149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 163741686535110483, guid: b3ff08084c070e14d9881e566087c796, type: 3}
@@ -1466,12 +1471,58 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8661812053481803914, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
   m_PrefabInstance: {fileID: 6915646478646810312}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1640489814}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9eac36b19e29bf74682db3e980343b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DusmanDavranisi
+--- !u!61 &1819770457
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640489814}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.14, y: 1.77}
+    newSize: {x: 1.14, y: 1.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.74, y: 3.26}
+  m_EdgeRadius: 0
 --- !u!1 &2085331016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,12 +1983,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6699758136751097760, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2668368511203706498, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 1819770457}
   m_SourcePrefab: {fileID: 100100000, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
