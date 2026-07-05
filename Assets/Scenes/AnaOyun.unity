@@ -1352,6 +1352,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 261906251}
     m_Modifications:
+    - target: {fileID: 262401136191777809, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2550940036977679083, guid: 209e98fe60c39cd4a81206b19d108df7, type: 3}
     - target: {fileID: 2668368511203706498, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_Name
       value: dusman_0
@@ -1395,6 +1399,14 @@ PrefabInstance:
     - target: {fileID: 3058837610125421451, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1935,6 +1947,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 261906251}
     m_Modifications:
+    - target: {fileID: 262401136191777809, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5095074250395373401, guid: 6a21415851421ef48b544e0612bf81ae, type: 3}
+    - target: {fileID: 262401136191777809, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262401136191777809, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 262401136191777809, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2668368511203706498, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_Name
       value: dusman_0
