@@ -3,6 +3,8 @@ using System.Collections;
 
 public class OyuncakMinigameManager : MonoBehaviour
 {
+    public KarakterDovus oyuncununDovusScripti;
+
     [Header("Sans Ayarlari")]
     public float basariSansBonusu = 15f;
     public float basarisizlikCezasi = -10f;
@@ -92,10 +94,12 @@ public class OyuncakMinigameManager : MonoBehaviour
             if (kazanildiMi)
             {
                 genelSistem.OyunuKazan(basariSansBonusu);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
             else
             {
                 genelSistem.OyunuKaybet(basarisizlikCezasi);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
         }
     }

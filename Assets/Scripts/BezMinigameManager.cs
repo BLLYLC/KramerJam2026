@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BezMinigameManager : MonoBehaviour
 {
+    public KarakterDovus oyuncununDovusScripti;
+
     [Header("Sans Ayarlari")]
     public float basariSansBonusu = 20f;
     public float basarisizlikCezasi = -15f;
@@ -13,8 +15,6 @@ public class BezMinigameManager : MonoBehaviour
     public GameObject minigameEkrani;
     public MonoBehaviour oyuncuHareketKodu;
     public BezFirlatma bezKodu;
-
-    public KarakterDovus oyuncununDovusScripti;
 
     public bool oyunAktif = false;
 
@@ -42,10 +42,12 @@ public class BezMinigameManager : MonoBehaviour
             if (kazanildiMi)
             {
                 genelSistem.OyunuKazan(basariSansBonusu);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
             else
             {
                 genelSistem.OyunuKaybet(basarisizlikCezasi);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
         }
     }

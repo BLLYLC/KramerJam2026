@@ -77,9 +77,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BebekMekanigi
   basariOlasiligi: 30
+  minimumOlasilik: 5
+  maksimumOlasilik: 100
+  ikiSaniyedeDusenMiktar: 2
+  mevcutSekil: 0
+  kazanmakIcinGerekenSekil: 5
+  toplamYanlisSayisi: 0
+  hamleSuresi: 5
+  sansDusmeSuresi: 2
+  oyunBitti: 0
+  dusmanBekleniyor: 0
+  baglidusmanlar:
+  - {fileID: 0}
+  - {fileID: 0}
   DogruKoyuldugunda:
     m_PersistentCalls:
       m_Calls: []
   YanlisKoyuldugunda:
+    m_PersistentCalls:
+      m_Calls: []
+  OyunKazanildiginda:
     m_PersistentCalls:
       m_Calls: []

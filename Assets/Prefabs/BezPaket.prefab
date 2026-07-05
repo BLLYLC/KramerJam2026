@@ -786,7 +786,7 @@ Transform:
   m_GameObject: {fileID: 6636368765126188563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.6775599, y: 2.77633, z: -1}
+  m_LocalPosition: {x: -0.09, y: 1.14, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -851,6 +851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BezTetikleyici
   minigameManager: {fileID: 4516870483618566902}
+  oyuncununDovusScripti: {fileID: 0}
 --- !u!212 &1033494532254295033
 SpriteRenderer:
   serializedVersion: 2
@@ -1151,7 +1152,7 @@ Transform:
   m_GameObject: {fileID: 8995514908908168010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.31442, y: 0.22862002, z: -1}
+  m_LocalPosition: {x: 0.86, y: -1.86, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1213,4 +1214,5 @@ MonoBehaviour:
   minigameEkrani: {fileID: 8995514908908168010}
   oyuncuHareketKodu: {fileID: 0}
   bezKodu: {fileID: 8462558869353937056}
+  oyuncununDovusScripti: {fileID: 0}
   oyunAktif: 0

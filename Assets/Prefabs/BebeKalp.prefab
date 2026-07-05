@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2983746680876871126}
   - component: {fileID: -1203106728277112628}
   - component: {fileID: 1687249396826262670}
-  - component: {fileID: 2190610903061610874}
   m_Layer: 0
   m_Name: BebeKalp
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.046451807, y: -3.6516395, z: -1}
-  m_LocalScale: {x: 0.4562851, y: 0.51307654, z: 1}
+  m_LocalScale: {x: 0.58460003, y: 0.57, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,17 +147,3 @@ MonoBehaviour:
   - {fileID: -7101925835962115255, guid: 25e3d17db7f82944b8308d7d2a5e0177, type: 3}
   - {fileID: 932475759639126994, guid: 2a1fba73f470bec4a859df9db8b19eda, type: 3}
   - {fileID: -7520735905814569328, guid: d3b132f17ae2e38489da3ba2fbfc60cd, type: 3}
---- !u!114 &2190610903061610874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8913470323891233652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf8a8a1d4752d464ea1e2351f1897a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BebeninCani
-  azamiCan: 100
-  canGorselleri: []

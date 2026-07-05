@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 866c05fef84ca1f439ea57b2c21e1ce3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -270,7 +270,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.587198, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -452,7 +452,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6782132, g: 1, b: 0.4584905, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -612,7 +612,7 @@ Transform:
   m_GameObject: {fileID: 7121802164916121328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.28927, y: 1.0283401, z: 0}
+  m_LocalPosition: {x: -9.26, y: 0.87, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -677,6 +677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OyuncakTetikleyici
   minigameManager: {fileID: 5754588530107125282}
+  oyuncununDovusScripti: {fileID: 0}
 --- !u!212 &5379837604957823966
 SpriteRenderer:
   serializedVersion: 2
@@ -821,7 +822,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.3679244, b: 0.3679244, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -964,6 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::OyuncakMinigameManager
   basariSansBonusu: 15
   basarisizlikCezasi: -10
+  oyuncununDovusScripti: {fileID: 0}
   minigameEkrani: {fileID: 7107554651841514929}
   oyuncuHareketKodu: {fileID: 0}
   oyuncaklar:
