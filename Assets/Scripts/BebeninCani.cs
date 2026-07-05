@@ -14,13 +14,29 @@ public class BebeninCani : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+   private SpriteRenderer BEBESR;
+    [SerializeField] private GameObject BebeGorsel;
+    [SerializeField] private Sprite BEBEaglaSprite;
+    [SerializeField] private Sprite BEBEidleSprite;
+    private float timer = 0f;
+    [SerializeField]private float aglamaSüresi = 0.75f;
+
     void Start()
     {
+        BEBESR=BebeGorsel.GetComponent<SpriteRenderer>();
         mevcutCan = azamiCan;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         GorseliGuncelle();
+    }
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if(timer>aglamaSüresi && BEBESR.sprite == BEBEaglaSprite)
+        {
+            BEBESR.sprite = BEBEidleSprite;
+        }
     }
 
     public void HasarAl(int hasarMiktari)
@@ -29,7 +45,8 @@ public class BebeninCani : MonoBehaviour
         Debug.Log("BebeKalp hasar aldý, kalan can: " + mevcutCan);
 
         GorseliGuncelle();
-
+        BEBESR.sprite = BEBEaglaSprite;
+        timer = 0f;
         if (mevcutCan <= 0)
         {
             Debug.Log("BebeKalp yok oldu, oyun bitti.");
