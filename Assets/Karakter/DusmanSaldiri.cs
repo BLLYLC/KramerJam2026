@@ -5,6 +5,9 @@ public class DusmanSaldiri : MonoBehaviour
     public float takipHizi = 2f;
     public int saniyelikHasar = 10;
 
+    public AudioSource sesKaynagi;
+    public AudioClip VurusSesi;
+
     private Transform hedefTransform;
     private BebeninCani hedefCanScripti;
 
@@ -46,6 +49,7 @@ public class DusmanSaldiri : MonoBehaviour
             if (hasarZamanlayici >= 1f)
             {
                 hedefCanScripti.HasarAl(saniyelikHasar);
+                sesKaynagi.PlayOneShot(VurusSesi);
                 hasarZamanlayici = 0f; // Zamanlayýcýyý sýfýrla ki yeniden saysýn
             }
         }
