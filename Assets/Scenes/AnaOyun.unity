@@ -267,6 +267,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5754588530107125282, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      propertyPath: genelSistem
+      value: 
+      objectReference: {fileID: 1310088546}
+    - target: {fileID: 5754588530107125282, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
       propertyPath: oyuncuHareketKodu
       value: 
       objectReference: {fileID: 2141178825}
@@ -281,7 +285,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9113190057208712194, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1310088546}
   m_SourcePrefab: {fileID: 100100000, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
 --- !u!1001 &157974090
 PrefabInstance:
@@ -571,7 +578,7 @@ Transform:
   m_GameObject: {fileID: 261906249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36067, y: 0.0143, z: 0}
+  m_LocalPosition: {x: 0.36067, y: 0.0143, z: 1}
   m_LocalScale: {x: 1.2812166, y: 1.1109453, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -919,6 +926,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4516870483618566902, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: genelSistem
+      value: 
+      objectReference: {fileID: 1896792304}
+    - target: {fileID: 4516870483618566902, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
       propertyPath: oyuncuHareketKodu
       value: 
       objectReference: {fileID: 2141178825}
@@ -977,7 +988,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9160158322254633308, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1896792304}
   m_SourcePrefab: {fileID: 100100000, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
 --- !u!1001 &1061209256
 PrefabInstance:
@@ -1143,6 +1157,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 13.960136, y: 0.1514864}
   m_EdgeRadius: 0
+--- !u!1 &1310088543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9113190057208712194, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+  m_PrefabInstance: {fileID: 142291081}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1310088546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310088543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!1001 &1349053215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1416,6 +1448,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eac36b19e29bf74682db3e980343b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DusmanDavranisi
+--- !u!1 &1896792301 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9160158322254633308, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+  m_PrefabInstance: {fileID: 968869271}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1896792304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896792301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!1 &2085331016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1560,30 @@ PrefabInstance:
       propertyPath: oyuncununDovusScripti
       value: 
       objectReference: {fileID: 2141178827}
+    - target: {fileID: 3703896750404924033, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_Size.x
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703896750404924033, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_Size.y
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703896750404924033, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.46333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703896750404924033, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.68333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169952575925500961, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6200001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169952575925500961, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4913806795088143424, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Name
       value: Market
@@ -1554,10 +1628,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8495409704059177168, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8296153015803410529, guid: f19711564fe3d3c48a9720abe5ee93b7, type: 3}
     - target: {fileID: 8887563204168908281, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
       objectReference: {fileID: 2141178827}
+    - target: {fileID: 8922616387231183903, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
