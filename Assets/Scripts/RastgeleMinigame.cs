@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class RastgeleMinigame : MonoBehaviour
 {
+    public SpriteRenderer hedefNesne0;
+    public SpriteRenderer hedefNesne1;
+    public SpriteRenderer hedefNesne2;
+    public SpriteRenderer hedefNesne3;
+
+
     [Header("Ses Ayarlarý")]
     public AudioSource sesKaynagi;
     public AudioClip tin;
@@ -65,6 +71,12 @@ public class RastgeleMinigame : MonoBehaviour
         yemek = true;
         islemTamamlandi = false;
 
+        if (hedefNesne0 != null)
+        {
+            hedefNesne0.color = Color.yellow; // Hedef nesneyi mavi yap
+            Debug.Log("Diðer nesnenin rengi baþarýyla deðiþtirildi!");
+        }
+
         yield return new WaitUntil(() => islemTamamlandi == true); ;
         Debug.Log("0. Görev bitti!");
     }
@@ -75,6 +87,12 @@ public class RastgeleMinigame : MonoBehaviour
         sesKaynagi.PlayOneShot(tin);
         market = true;
         islemTamamlandi = false;
+
+        if (hedefNesne1 != null)
+        {
+            hedefNesne1.color = Color.yellow; // Hedef nesneyi mavi yap
+            Debug.Log("Diðer nesnenin rengi baþarýyla deðiþtirildi!");
+        }
 
         yield return new WaitUntil(() => islemTamamlandi == true); ;
         Debug.Log("1. Görev bitti!");
@@ -87,6 +105,12 @@ public class RastgeleMinigame : MonoBehaviour
         oyuncak = true;
         islemTamamlandi = false;
 
+        if (hedefNesne2 != null)
+        {
+            hedefNesne2.color = Color.yellow; // Hedef nesneyi mavi yap
+            Debug.Log("Diðer nesnenin rengi baþarýyla deðiþtirildi!");
+        }
+
         yield return new WaitUntil(() => islemTamamlandi == true); ;
         Debug.Log("2. Görev bitti!");
     }
@@ -97,6 +121,12 @@ public class RastgeleMinigame : MonoBehaviour
         sesKaynagi.PlayOneShot(tin);
         bez = true;
         islemTamamlandi = false;
+
+        if (hedefNesne3 != null)
+        {
+            hedefNesne3.color = Color.yellow; // Hedef nesneyi mavi yap
+            Debug.Log("Diðer nesnenin rengi baþarýyla deðiþtirildi!");
+        }
 
         yield return new WaitUntil(() => islemTamamlandi == true); ;
         Debug.Log("3. Görev bitti!");

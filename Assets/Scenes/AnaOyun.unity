@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: karakterG_0
       objectReference: {fileID: 0}
+    - target: {fileID: 4878441587352419386, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
+      propertyPath: hareketHizi
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4878802612146010542, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.05
@@ -354,6 +358,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 429387775354340746, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
+    - target: {fileID: 429387775354340746, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
       objectReference: {fileID: 2141178827}
@@ -429,6 +437,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3150115812026328007, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
+    - target: {fileID: 3150115812026328007, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      propertyPath: oyuncununDovusScripti
+      value: 
+      objectReference: {fileID: 2141178827}
     - target: {fileID: 4341185710834745381, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.61479
@@ -686,6 +702,10 @@ PrefabInstance:
       value: 1.1825
       objectReference: {fileID: 0}
     - target: {fileID: 5904367017030312952, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
+    - target: {fileID: 5904367017030312952, guid: b3ff08084c070e14d9881e566087c796, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
       objectReference: {fileID: 2141178827}
@@ -705,6 +725,10 @@ PrefabInstance:
       propertyPath: toplamSallamaMiktari
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6892915511841306345, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
     - target: {fileID: 6892915511841306345, guid: b3ff08084c070e14d9881e566087c796, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
@@ -920,6 +944,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296311943}
+  - component: {fileID: 296311944}
+  - component: {fileID: 296311945}
   m_Layer: 0
   m_Name: RandomMiniGame
   m_TagString: Untagged
@@ -942,6 +968,126 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296311944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296311942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0064cf443f784419c9878635cc1375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RastgeleMinigame
+  hedefNesne0: {fileID: 1600330993}
+  hedefNesne1: {fileID: 1246708666}
+  hedefNesne2: {fileID: 1312049942}
+  hedefNesne3: {fileID: 765767591}
+  sesKaynagi: {fileID: 296311945}
+  tin: {fileID: 8300000, guid: 804a13a9f81182344982abd28d15afb9, type: 3}
+  islemTamamlandi: 0
+  yemek: 0
+  market: 0
+  oyuncak: 0
+  bez: 0
+--- !u!82 &296311945
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296311942}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1405,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8035781072101833329, guid: 2814b81710f6f0c4e8da3978f98439ea, type: 3}
   m_PrefabInstance: {fileID: 1061209256}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &765767591 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1033494532254295033, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+  m_PrefabInstance: {fileID: 968869271}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &858768255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7641816684373103919, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
@@ -1478,6 +1629,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.69
       objectReference: {fileID: 0}
+    - target: {fileID: 2352168928413002463, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
+    - target: {fileID: 2352168928413002463, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: oyuncununDovusScripti
+      value: 
+      objectReference: {fileID: 2141178827}
     - target: {fileID: 2971414529770061898, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
       propertyPath: m_Size.x
       value: 0.85
@@ -1562,6 +1721,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8914071824314814429, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
     - target: {fileID: 8914071824314814429, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
@@ -1840,6 +2003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  rmg: {fileID: 296311944}
   oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!1 &1179953939
 GameObject:
@@ -1946,6 +2110,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!212 &1246708666 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3202127315590704664, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+  m_PrefabInstance: {fileID: 2107742822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1264239199
 GameObject:
   m_ObjectHideFlags: 0
@@ -2041,7 +2210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  rmg: {fileID: 296311944}
   oyuncununDovusScripti: {fileID: 2141178827}
+--- !u!212 &1312049942 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5379837604957823966, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+  m_PrefabInstance: {fileID: 142291081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1324522097
 GameObject:
   m_ObjectHideFlags: 0
@@ -2615,6 +2790,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1593500094}
   m_CullTransparentMesh: 1
+--- !u!212 &1600330993 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6937787722741916854, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+  m_PrefabInstance: {fileID: 157974090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641973783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2874,6 +3054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  rmg: {fileID: 296311944}
   oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!1 &2085331016
 GameObject:
@@ -3061,6 +3242,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2061957408183693394, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
+    - target: {fileID: 2061957408183693394, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
       objectReference: {fileID: 2141178827}
@@ -3156,6 +3341,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8296153015803410529, guid: f19711564fe3d3c48a9720abe5ee93b7, type: 3}
+    - target: {fileID: 8887563204168908281, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: rmg
+      value: 
+      objectReference: {fileID: 296311944}
     - target: {fileID: 8887563204168908281, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 

@@ -11,7 +11,7 @@ public class BezTetikleyici : MonoBehaviour
 
     private void Update()
     {
-        if (oyuncuAlandaMi && Input.GetKeyDown(KeyCode.E))
+        if (oyuncuAlandaMi && Input.GetKeyDown(KeyCode.E) && rmg.bez)
         {
             Debug.Log("E TUSUNA BASILDI! Tetikleyici calisti.");
             
@@ -21,6 +21,7 @@ public class BezTetikleyici : MonoBehaviour
                 {
                     Debug.Log("Sistem musait, oyun baslatiliyor...");
                     minigameManager.OyunuBaslat();
+                    GetComponent<SpriteRenderer>().color = Color.white;
                     oyuncununDovusScripti.saldirabilirMi = false; 
                 }
                 else

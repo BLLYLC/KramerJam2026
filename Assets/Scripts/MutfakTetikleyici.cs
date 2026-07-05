@@ -31,11 +31,12 @@ public class MutfakTetikleyici : MonoBehaviour
 
     private void Update()
     {
-        if (oyuncuIceride && Input.GetKeyDown(KeyCode.E) && !yemekMinigameEkrani.activeSelf)
+        if (oyuncuIceride && Input.GetKeyDown(KeyCode.E) && !yemekMinigameEkrani.activeSelf && rmg.yemek)
         {
             yemekMinigameEkrani.SetActive(true);
             
             minigameManager.OyunuBaslat();
+            GetComponent<SpriteRenderer>().color = Color.white;
 
             oyuncununDovusScripti.saldirabilirMi = false;
         }

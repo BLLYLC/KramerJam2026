@@ -11,11 +11,12 @@ public class MarketTetikleyici : MonoBehaviour
 
     private void Update()
     {
-        if (oyuncuAlandaMi && Input.GetKeyDown(KeyCode.E))
+        if (oyuncuAlandaMi && Input.GetKeyDown(KeyCode.E) && rmg.market)
         {
             if (minigameManager != null && !minigameManager.oyunAktif)
             {
                 minigameManager.OyunuBaslat();
+                GetComponent<SpriteRenderer>().color = Color.white;
                 oyuncununDovusScripti.saldirabilirMi = false;
             }
         }
