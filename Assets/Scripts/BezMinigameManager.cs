@@ -11,6 +11,8 @@ public class BezMinigameManager : MonoBehaviour
     public MonoBehaviour oyuncuHareketKodu;
     public BezFirlatma bezKodu;
 
+    public KarakterDovus oyuncununDovusScripti;
+
     public bool oyunAktif = false;
 
     public void OyunuBaslat()
@@ -37,10 +39,12 @@ public class BezMinigameManager : MonoBehaviour
             if (kazanildiMi)
             {
                 BebekMekanigi.instance.OlasiligiDegistir(basariSansBonusu);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
             else
             {
                 BebekMekanigi.instance.OlasiligiDegistir(basarisizlikCezasi);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
         }
     }

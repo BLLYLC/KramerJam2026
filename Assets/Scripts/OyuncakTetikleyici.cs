@@ -5,6 +5,8 @@ public class OyuncakTetikleyici : MonoBehaviour
     public OyuncakMinigameManager minigameManager;
     private bool oyuncuAlandaMi = false;
 
+    public KarakterDovus oyuncununDovusScripti;
+
     private void Update()
     {
         if (oyuncuAlandaMi && Input.GetKeyDown(KeyCode.E))
@@ -12,6 +14,7 @@ public class OyuncakTetikleyici : MonoBehaviour
             if (minigameManager != null && !minigameManager.oyunAktif)
             {
                 minigameManager.OyunuBaslat();
+                oyuncununDovusScripti.saldirabilirMi = false;
             }
         }
     }

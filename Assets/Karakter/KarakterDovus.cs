@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class KarakterDovus : MonoBehaviour
 {
+    public bool saldirabilirMi = true;
+
     [Header("Ses Ayarlarý")]
     public AudioSource sesKaynagi;
     public AudioClip normalVurusSesi;
@@ -30,7 +32,7 @@ public class KarakterDovus : MonoBehaviour
         {
             comboSayaci = 0;
         }
-        if (Input.GetMouseButtonDown(0))
+        if (saldirabilirMi && Input.GetMouseButtonDown(0))
         {
             Saldir();
         }

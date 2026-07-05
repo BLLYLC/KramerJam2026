@@ -7,6 +7,8 @@ public class OyuncakMinigameManager : MonoBehaviour
     public float basariSansBonusu = 15f;
     public float basarisizlikCezasi = -10f;
 
+    public KarakterDovus oyuncununDovusScripti;
+
     [Header("Sistem Ayarlari")]
     public GameObject minigameEkrani;
     public MonoBehaviour oyuncuHareketKodu;
@@ -89,10 +91,12 @@ public class OyuncakMinigameManager : MonoBehaviour
             if (kazanildiMi)
             {
                 BebekMekanigi.instance.OlasiligiDegistir(basariSansBonusu);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
             else
             {
                 BebekMekanigi.instance.OlasiligiDegistir(basarisizlikCezasi);
+                oyuncununDovusScripti.saldirabilirMi = true;
             }
         }
     }
