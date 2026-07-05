@@ -37,13 +37,27 @@ public class BebekMekanigi : MonoBehaviour
     public UnityEvent YanlisKoyuldugunda;
     public UnityEvent OyunKazanildiginda;
 
+    [SerializeField] private GameObject BEBEGorsel;
+    [SerializeField] private Sprite BEBE_idle; 
+    [SerializeField] private Sprite BEBE_angry;
+    private SpriteRenderer BEBESR;
+    private float bebeSpriteSuresi = 1f;
+    private float bebeSpriteSayac = 0f;
     private void Awake() 
     { 
         instance = this; 
     }
-
+    private void Start()
+    {
+        BEBESR = BEBEGorsel.GetComponent<SpriteRenderer>();
+    }
     private void Update()
     {
+        bebeSpriteSayac += Time.deltaTime;
+        if (BEBESR.sprite != BEBE_idle && bebeSpriteSayac > bebeSpriteSuresi) { 
+            BEBESR.sprite = BEBE_idle;
+        }
+
         if (oyunBitti || dusmanBekleniyor) return;
 
         sansDusmeSayaci += Time.deltaTime;
@@ -82,7 +96,11 @@ public class BebekMekanigi : MonoBehaviour
         {
             toplamYanlisSayisi++;
             Debug.Log("HATA! Bebek sekli koyamadi. Toplam Yanlis: " + toplamYanlisSayisi);
-            YanlisKoyuldugunda.Invoke(); 
+            YanlisKoyuldugunda.Invoke();
+            
+            BEBESR.sprite = BEBE_angry;
+            bebeSpriteSayac = 0f;
+
 
             if (toplamYanlisSayisi % 3 == 0)
             {
