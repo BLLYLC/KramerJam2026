@@ -84,8 +84,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4188679, g: 0.25926977, b: 0.1794019, a: 1}
+  m_Sprite: {fileID: 7159951069815360940, guid: 4460c4e5b5e74cf488ac0cdf84d30d96, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -613,8 +613,8 @@ Transform:
   m_GameObject: {fileID: 5792714347260988342}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.58, y: -2.06, z: -1}
-  m_LocalScale: {x: 1.8618, y: 1, z: 1}
+  m_LocalPosition: {x: 0.58, y: -1.69, z: -1}
+  m_LocalScale: {x: 1.8618, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6100980377724504128}
@@ -668,8 +668,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.15769327, g: 0.09265217, b: 0.5396226, a: 1}
+  m_Sprite: {fileID: -7823538847007155948, guid: 0c98860dc0aeaf440913b0c03f436f93, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -712,17 +712,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.17}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.642857, y: 1.7428571}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.85, y: 1.02}
   m_EdgeRadius: 0
 --- !u!1 &6582855709875531139
 GameObject:
@@ -786,7 +786,7 @@ Transform:
   m_GameObject: {fileID: 6636368765126188563}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.09, y: 1.14, z: -1}
+  m_LocalPosition: {x: 1.04, y: 0.62, z: -0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1175,6 +1175,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8468219879851277606}
   - component: {fileID: 4516870483618566902}
+  - component: {fileID: 2352168928413002463}
   m_Layer: 8
   m_Name: BezMinigameSistemi
   m_TagString: Untagged
@@ -1209,10 +1210,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2ba406f5eb21643a73a4fb7386fc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BezMinigameManager
+  oyuncununDovusScripti: {fileID: 0}
   basariSansBonusu: 20
   basarisizlikCezasi: -15
+  genelSistem: {fileID: 2352168928413002463}
   minigameEkrani: {fileID: 8995514908908168010}
   oyuncuHareketKodu: {fileID: 0}
   bezKodu: {fileID: 8462558869353937056}
-  oyuncununDovusScripti: {fileID: 0}
   oyunAktif: 0
+--- !u!114 &2352168928413002463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9160158322254633308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+  oyuncununDovusScripti: {fileID: 0}

@@ -219,7 +219,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KarakterDovus
   saldirabilirMi: 1
-  tavaSprite: {fileID: 0}
+  karakterHareket: {fileID: 4878441587352419386}
+  tavaSpawnNoktasi: {fileID: 7641816684373103919}
+  tavaPrefab: {fileID: 6625981776029840309, guid: f97f885f5a12ded4f993b5bb9ee8f974, type: 3}
   sesKaynagi: {fileID: 955395263847457996}
   normalVurusSesi: {fileID: 8300000, guid: f3b279ae585088d44a2a923bd933f463, type: 3}
   bitiriciVurusSesi: {fileID: 8300000, guid: df4148989d0a98d438d418984442035e, type: 3}
@@ -354,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 6601464772414187929}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5700009, y: -0.58999985, z: 0}
+  m_LocalPosition: {x: -1.05, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
