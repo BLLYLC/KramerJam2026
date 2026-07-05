@@ -26,6 +26,7 @@ public class BebekMekanigi : MonoBehaviour
     public TMP_Text kurtarilmaYazisi;
     public TMP_Text asamaYazisi;
     public TMP_Text durumBildirimYazisi; 
+    public TMP_Text sansYazisi; // YENI EKLENEN SANS YAZISI BOSLUGU
 
     [Header("Zamanlayicilar")]
     public float hamleSuresi = 5f;
@@ -215,6 +216,8 @@ public class BebekMekanigi : MonoBehaviour
         basariOlasiligi += miktar;
         basariOlasiligi = Mathf.Clamp(basariOlasiligi, minimumOlasilik, maksimumOlasilik);
         Debug.Log("SANS GUNCELLEMESI! Yeni Sans: %" + basariOlasiligi);
+        
+        ArayuzuGuncelle(); // SANS HER DEGISTIGINDE EKRAN GUNCELLENSIN
     }
 
     private void TumOyunuKazan()
@@ -222,7 +225,7 @@ public class BebekMekanigi : MonoBehaviour
         Debug.Log("MUKEMMEL! Bebek tüm sekilleri bitirdi ve OYUN KAZANILDI!");
         oyunBitti = true;
         OyunKazanildiginda.Invoke();
-        LevelManager.Instance.LoadOyunKazanma();
+        LevelManager.Instance.LoadOyunKazanma(); // SENIN EKLEDIGIN SATIR BURADA
         
         EkranaBildirimYaz("OYUN KAZANILDI!", Color.yellow);
         
@@ -239,6 +242,12 @@ public class BebekMekanigi : MonoBehaviour
         if (kurtarilmaYazisi != null)
         {
             kurtarilmaYazisi.text = "Kurtarilma: " + kurtarilmaSayisi;
+        }
+
+        // YENI EKLENEN SANS METNI YAZDIRMA KISMI
+        if (sansYazisi != null)
+        {
+            sansYazisi.text = "Sans: %" + Mathf.RoundToInt(basariOlasiligi);
         }
 
         if (hakYazisi != null)
