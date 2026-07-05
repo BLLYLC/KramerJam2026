@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: e4c7f939a625fe64b8374f0148f56042
+  - enabled: 1
+    path: Assets/Scenes/OyunuKazandinScene.unity
+    guid: 809a1a913281a4d43979f1540f5177cb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
