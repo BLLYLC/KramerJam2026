@@ -314,6 +314,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 5754588530107125282, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      propertyPath: oyuncununDovusScripti
+      value: 
+      objectReference: {fileID: 2141178827}
     - target: {fileID: 6182930141363190390, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
       propertyPath: m_Name
       value: OyuncakMinigame
