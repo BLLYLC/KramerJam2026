@@ -1754,6 +1754,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4679063325264667371, guid: e142d9d5b5b84de46891c667b621d602, type: 3}
     - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: kazanmakIcinGerekenSekil
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
       propertyPath: 'baglidusmanlar.Array.data[0]'
       value: 
       objectReference: {fileID: 1819770452}

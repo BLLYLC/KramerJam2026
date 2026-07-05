@@ -15,7 +15,7 @@ public class BebekMekanigi : MonoBehaviour
 
     [Header("Oyun Asamalari")]
     public int mevcutSekil = 0;
-    public int kazanmakIcinGerekenSekil = 5;
+    [SerializeField]public int kazanmakIcinGerekenSekil = 8;
     public int toplamYanlisSayisi = 0;
 
     [Header("Zamanlayicilar")]
