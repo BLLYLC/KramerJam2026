@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MinigameSistemi : MonoBehaviour
 {
+    public RastgeleMinigame rmg;
+
     public KarakterDovus oyuncununDovusScripti;
 
     public void OyunuKazan(float kazanilanPuan)
@@ -9,6 +11,7 @@ public class MinigameSistemi : MonoBehaviour
         Debug.Log("Minigame KAZANILDI! Bebeğin şansı artıyor: +" + kazanilanPuan);
         BebekMekanigi.instance.OlasiligiDegistir(kazanilanPuan);
         oyuncununDovusScripti.saldirabilirMi = true;
+        rmg.islemTamamlandi = true;
 
     }
 
@@ -17,5 +20,6 @@ public class MinigameSistemi : MonoBehaviour
         Debug.Log("Minigame KAYBEDİLDİ! Bebeğin şansı düşüyor: " + kaybedilenPuan);
         BebekMekanigi.instance.OlasiligiDegistir(kaybedilenPuan);
         oyuncununDovusScripti.saldirabilirMi = true;
+        rmg.islemTamamlandi = true;
     }
 }

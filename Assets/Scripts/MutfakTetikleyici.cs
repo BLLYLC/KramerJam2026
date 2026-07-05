@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MutfakTetikleyici : MonoBehaviour
 {
+    public RastgeleMinigame rmg;
+
     [Header("Bağlanacak Objeler")]
     public GameObject yemekMinigameEkrani; 
     public YemekMinigameManager minigameManager;

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class OyuncakTetikleyici : MonoBehaviour
 {
+    public RastgeleMinigame rmg;
+
     public OyuncakMinigameManager minigameManager;
     private bool oyuncuAlandaMi = false;
 
