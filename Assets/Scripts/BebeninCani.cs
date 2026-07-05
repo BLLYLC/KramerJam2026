@@ -34,6 +34,7 @@ public class BebeninCani : MonoBehaviour
         {
             Debug.Log("BebeKalp yok oldu, oyun bitti.");
             // + oyun bitti kodu
+            LevelManager.Instance.LoadOyunSonu();
         }
     }
     void GorseliGuncelle()
