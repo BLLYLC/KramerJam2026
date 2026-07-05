@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 733069636}
   - component: {fileID: 733069637}
   m_Layer: 0
-  m_Name: bebe_idle_0
+  m_Name: bebegorsel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1741,6 +1741,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BebekSistem
       objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: BEBEGorsel
+      value: 
+      objectReference: {fileID: 733069635}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: BEBEidleSprite
+      value: 
+      objectReference: {fileID: -3717010099561399725, guid: 69a9e59f8eecb0c4898c08aacc5db356, type: 3}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: "BEBEk\u0131zg\u0131nSprite"
+      value: 
+      objectReference: {fileID: -4679063325264667371, guid: e142d9d5b5b84de46891c667b621d602, type: 3}
     - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
       propertyPath: 'baglidusmanlar.Array.data[0]'
       value: 
