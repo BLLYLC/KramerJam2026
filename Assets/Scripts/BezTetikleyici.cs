@@ -19,7 +19,7 @@ public class BezTetikleyici : MonoBehaviour
                 {
                     Debug.Log("Sistem musait, oyun baslatiliyor...");
                     minigameManager.OyunuBaslat();
-                    oyuncununDovusScripti.saldirabilirMi = false;
+                    oyuncununDovusScripti.saldirabilirMi = false; 
                 }
                 else
                 {
