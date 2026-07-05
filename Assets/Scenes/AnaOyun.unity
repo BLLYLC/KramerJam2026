@@ -2622,6 +2622,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+      propertyPath: BebeGorsel
+      value: 
+      objectReference: {fileID: 733069635}
+    - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+      propertyPath: BEBEaglaSprite
+      value: 
+      objectReference: {fileID: 360094929976807130, guid: 125c6e99f10483043ab349b249193001, type: 3}
+    - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+      propertyPath: BEBEidleSprite
+      value: 
+      objectReference: {fileID: -3717010099561399725, guid: 69a9e59f8eecb0c4898c08aacc5db356, type: 3}
     - target: {fileID: 2757614267244518867, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.91
