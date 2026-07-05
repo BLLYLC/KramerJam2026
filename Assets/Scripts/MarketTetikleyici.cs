@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class MarketTetikleyici : MonoBehaviour
 {
+    public RastgeleMinigame rmg;
+
     public MarketMinigameManager minigameManager;
     private bool oyuncuAlandaMi = false;
 

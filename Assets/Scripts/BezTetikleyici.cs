@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BezTetikleyici : MonoBehaviour
 {
+    public RastgeleMinigame rmg;
+
     public BezMinigameManager minigameManager;
     private bool oyuncuAlandaMi = false;
 
