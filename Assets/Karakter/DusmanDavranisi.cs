@@ -1,7 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class DusmanDavranisi : MonoBehaviour
 {
+    private SpriteRenderer spriteRenderer;
+
     private Rigidbody2D rb;
 
     public int azamiCan = 100;
@@ -14,6 +17,8 @@ public class DusmanDavranisi : MonoBehaviour
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         gameObject.SetActive(false);
         Debug.Log(gameObject.name + " �ld� ve deaktif edildi.");
 
@@ -21,10 +26,19 @@ public class DusmanDavranisi : MonoBehaviour
         baslangicPozisyonu = transform.localPosition;
         mevcutCan = azamiCan;
     }
+    private IEnumerator KirmiziFlasEfekti()
+    {
+        spriteRenderer.color = Color.red;
+
+        yield return new WaitForSeconds(0.15f);
+
+        spriteRenderer.color = Color.white;
+    }
 
     public void HasarAl(int hasarMiktari, Vector2 firlamaYonu, float firlamaKuvveti)
     {
         mevcutCan -= hasarMiktari;
+        StartCoroutine(KirmiziFlasEfekti());
         Debug.Log($"D��man {hasarMiktari} kadar hasar ald�, kalan can�: {mevcutCan}");
 
         if (firlamaKuvveti > 0 && rb != null)
