@@ -306,12 +306,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100774485}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.97, y: 2.69, z: 0}
-  m_LocalScale: {x: 1.12, y: 0.95, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.160631, y: 2.4084892, z: -0.28}
+  m_LocalScale: {x: 0.8741692, y: 0.8551275, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 261906251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &142291081
 PrefabInstance:
@@ -813,6 +813,7 @@ Transform:
   m_LocalScale: {x: 1.2812166, y: 1.1109453, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 100774487}
   - {fileID: 2145183056}
   - {fileID: 909237219}
   - {fileID: 2135039331}
@@ -1618,11 +1619,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.14
+      value: 1.888
       objectReference: {fileID: 0}
     - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.77
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8661812053481803914, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: azamiCan
@@ -2247,6 +2248,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.048
+      objectReference: {fileID: 0}
+    - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.048
+      objectReference: {fileID: 0}
     - target: {fileID: 8661812053481803914, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: azamiCan
       value: 80
@@ -2269,4 +2278,3 @@ SceneRoots:
   - {fileID: 2107742822}
   - {fileID: 142291081}
   - {fileID: 968869271}
-  - {fileID: 100774487}
