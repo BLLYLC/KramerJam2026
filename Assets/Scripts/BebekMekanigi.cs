@@ -40,6 +40,7 @@ public class BebekMekanigi : MonoBehaviour
 
     [Header("Dusman Sistemi")]
     public List<DusmanDavranisi> baglidusmanlar = new List<DusmanDavranisi>(); 
+    private int aktifDusmanSayisi = 0;
 
     [Header("Oyun Ici Tetikleyiciler")]
     public UnityEvent DogruKoyuldugunda = new UnityEvent();
@@ -79,7 +80,7 @@ public class BebekMekanigi : MonoBehaviour
     private void Update()
     {
         bebeSayac += Time.deltaTime;
-        if (BEBESR != null && BEBESR.sprite == BEBEkızgınSprite && bebeSayac > bebeAnimSure) 
+        if (BEBESR != null && BEBESR.sprite != BEBEidleSprite && bebeSayac > bebeAnimSure) 
         {
             BEBESR.sprite = BEBEidleSprite;
         }
@@ -166,11 +167,14 @@ public class BebekMekanigi : MonoBehaviour
     {
         Debug.Log("3 YANLIS YAPILDI! Sistem kilitlendi, dusman cagiriliyor.");
         dusmanBekleniyor = true;
+        aktifDusmanSayisi = 0;
+
         foreach (DusmanDavranisi dusman in baglidusmanlar)
         {
             if (dusman != null)
             {
                 dusman.YenidenCanlandir();
+                aktifDusmanSayisi++;
             }
             else
             {
@@ -183,7 +187,15 @@ public class BebekMekanigi : MonoBehaviour
 
     public void DusmanYenildi()
     {
-        Debug.Log("DUSMAN YENILDI! Bebek kilidi acildi, sekiller sifirlandi.");
+        aktifDusmanSayisi--;
+
+        if (aktifDusmanSayisi > 0)
+        {
+            Debug.Log("Bir dusman yenildi ama dalga bitmedi. Kalan dusman: " + aktifDusmanSayisi);
+            return;
+        }
+
+        Debug.Log("TUM DUSMANLAR YENILDI! Bebek kilidi acildi, sekiller sifirlandi.");
         dusmanBekleniyor = false; 
         mevcutSekil = 0;          
         hamleSayaci = 0f;         
@@ -210,6 +222,7 @@ public class BebekMekanigi : MonoBehaviour
         Debug.Log("MUKEMMEL! Bebek tüm sekilleri bitirdi ve OYUN KAZANILDI!");
         oyunBitti = true;
         OyunKazanildiginda.Invoke();
+        LevelManager.Instance.LoadOyunKazanma();
         
         EkranaBildirimYaz("OYUN KAZANILDI!", Color.yellow);
         

@@ -29,6 +29,10 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void LoadOyunKazanma()
+    {
+        SceneManager.LoadScene(3);
+    }
     public void LoadAnaMenu()
     {
         SceneManager.LoadScene(0);

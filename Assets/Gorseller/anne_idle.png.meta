@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9793f8144573c3e4d88587e0d1be6641
+guid: 23d4ce83cb25e754ba609e866e894209
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2189271524857643856
-    second: AnneSheet_0
+      213: 863516417121345692
+    second: anne_idle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AnneSheet_0
+      name: anne_idle_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 34
         y: 0
-        width: 2816
-        height: 1536
+        width: 443
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05384044adad16e10800000000000000
-      internalID: 2189271524857643856
+      spriteID: c906c343b93dbfb00800000000000000
+      internalID: 863516417121345692
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AnneSheet_0: 2189271524857643856
+      anne_idle_0: 863516417121345692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

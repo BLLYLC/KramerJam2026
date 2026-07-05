@@ -2003,7 +2003,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+<<<<<<< HEAD
   rmg: {fileID: 296311944}
+=======
+  rmg: {fileID: 0}
+>>>>>>> d21acc9d4cd750b7859409757871df8e5907b63e
   oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!1 &1179953939
 GameObject:
@@ -2210,7 +2214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+<<<<<<< HEAD
   rmg: {fileID: 296311944}
+=======
+  rmg: {fileID: 0}
+>>>>>>> d21acc9d4cd750b7859409757871df8e5907b63e
   oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!212 &1312049942 stripped
 SpriteRenderer:
@@ -2592,6 +2600,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+      propertyPath: hasarSesi
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f4b36f0355ec6c4cb0b9259218785c5, type: 3}
     - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
       propertyPath: BebeGorsel
       value: 
@@ -3054,7 +3066,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
+<<<<<<< HEAD
   rmg: {fileID: 296311944}
+=======
+  rmg: {fileID: 0}
+>>>>>>> d21acc9d4cd750b7859409757871df8e5907b63e
   oyuncununDovusScripti: {fileID: 2141178827}
 --- !u!1 &2085331016
 GameObject:
