@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1407301114275275314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7641816684373103919}
+  m_Layer: 7
+  m_Name: TavaSpawnNoktasi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7641816684373103919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407301114275275314}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.081, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1546993380760686588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843589616705332368
 GameObject:
   m_ObjectHideFlags: 0
@@ -36,6 +67,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4878802612146010542}
+  - {fileID: 7641816684373103919}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2758781413668170793
@@ -186,6 +218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3338d4bd87e274db6b0d46b49b0da2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KarakterDovus
+  saldirabilirMi: 1
+  tavaSprite: {fileID: 0}
   sesKaynagi: {fileID: 955395263847457996}
   normalVurusSesi: {fileID: 8300000, guid: f3b279ae585088d44a2a923bd933f463, type: 3}
   bitiriciVurusSesi: {fileID: 8300000, guid: df4148989d0a98d438d418984442035e, type: 3}

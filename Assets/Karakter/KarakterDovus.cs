@@ -4,7 +4,11 @@ using UnityEngine;
 public class KarakterDovus : MonoBehaviour
 {
     public bool saldirabilirMi = true;
-
+    
+    [SerializeField]private KarakterHareket karakterHareket;
+    public Transform tavaSpawnNoktasi;
+    [SerializeField]private GameObject tavaPrefab; 
+    
     [Header("Ses Ayarlarý")]
     public AudioSource sesKaynagi;
     public AudioClip normalVurusSesi;
@@ -41,6 +45,16 @@ public class KarakterDovus : MonoBehaviour
     {
         comboSayaci++;
         sonTiklamaZamani = Time.time;
+        
+        if (karakterHareket.sagaBakýyorMuAl())
+        {
+           Instantiate(tavaPrefab, tavaSpawnNoktasi.position, Quaternion.Euler(0, 0, -90));
+
+        }
+        else
+        {
+            Instantiate(tavaPrefab, tavaSpawnNoktasi.position, Quaternion.Euler(0, 0, 90));
+        }
 
         if (comboSayaci > 3)
         {

@@ -45,4 +45,8 @@ public class KarakterHareket : MonoBehaviour
 
         transform.localScale = yeniOlcek;
     }
+    public bool sagaBakýyorMuAl()
+    {
+        return sagaBakiyor;
+    }
 }
