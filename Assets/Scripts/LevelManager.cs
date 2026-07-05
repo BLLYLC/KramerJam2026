@@ -5,6 +5,8 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
+    public AudioClip olmeSesi;
+    private AudioSource sesKaynagi;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -15,6 +17,7 @@ public class LevelManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        sesKaynagi = gameObject.AddComponent<AudioSource>();
     }
   
     public void LoadAnaOyun()
@@ -28,6 +31,10 @@ public class LevelManager : MonoBehaviour
     public void LoadOyunSonu()
     {
         SceneManager.LoadScene(2);
+        if (olmeSesi != null)
+        {
+            sesKaynagi.PlayOneShot(olmeSesi);
+        }
     }
     public void LoadOyunKazanma()
     {

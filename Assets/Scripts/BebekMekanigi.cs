@@ -80,7 +80,7 @@ public class BebekMekanigi : MonoBehaviour
     private void Update()
     {
         bebeSayac += Time.deltaTime;
-        if (BEBESR != null && BEBESR.sprite != BEBEidleSprite && bebeSayac > bebeAnimSure) 
+        if (BEBESR != null && BEBESR.sprite == BEBEkızgınSprite && bebeSayac > bebeAnimSure) 
         {
             BEBESR.sprite = BEBEidleSprite;
         }

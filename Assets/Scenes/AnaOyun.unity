@@ -2601,6 +2601,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
+      propertyPath: olmeSesi
+      value: 
+      objectReference: {fileID: 8300000, guid: bb10e4e1d9050f24d85ed590e97fc373, type: 3}
+    - target: {fileID: 1687249396826262670, guid: 8d9087fbd8f6f9749a7cb01d105b5faf, type: 3}
       propertyPath: hasarSesi
       value: 
       objectReference: {fileID: 8300000, guid: 5f4b36f0355ec6c4cb0b9259218785c5, type: 3}

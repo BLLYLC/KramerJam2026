@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a3b800639444e64ba2d5c1259f903fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  olmeSesi: {fileID: 8300000, guid: bb10e4e1d9050f24d85ed590e97fc373, type: 3}
