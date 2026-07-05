@@ -134,6 +134,7 @@ public class BebekMekanigi : MonoBehaviour
         mevcutSekil = 0;          
         hamleSayaci = 0f;         
         sansDusmeSayaci = 0f;
+        BebekGorselYonetici.instance.GorselleriSifirla();
     }
 
     public void OlasiligiDegistir(float miktar)
