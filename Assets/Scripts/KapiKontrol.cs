@@ -4,6 +4,7 @@ public class KapiKontrol : MonoBehaviour
 {
     private bool oyuncuAlanda = false;
     private bool kapiAcik = false;
+    private float time = 0f;
 
     [Header("Ses Ayarlarý")]
     public AudioSource sesKaynagi;
@@ -13,6 +14,7 @@ public class KapiKontrol : MonoBehaviour
     [Header("Kapý Ayarlarý")]
     public float acilmaAcisi = -90f;
     public float donmeHizi = 5f;
+    [SerializeField] float kapiAcikDurmaSuersi = 3f;
 
     [Header("Bileþen Baðlantýsý")]
     public Collider2D kapiDuvarCollider;
@@ -33,6 +35,11 @@ public class KapiKontrol : MonoBehaviour
 
     void Update()
     {
+        time += Time.deltaTime;
+        if ((time > kapiAcikDurmaSuersi)&&kapiAcik)
+        {
+            KapiyiTetikle();
+        }
         if (oyuncuAlanda && Input.GetKeyDown(KeyCode.E))
         {
             KapiyiTetikle();
@@ -45,8 +52,9 @@ public class KapiKontrol : MonoBehaviour
     {
         kapiAcik = !kapiAcik;
 
-        if (kapiAcik)
+        if (kapiAcik)//kapýyý ac
         {
+            time = 0;
             hedefRotasyon = kapaliRotasyon * Quaternion.Euler(0, 0, acilmaAcisi);
 
             if (kapiDuvarCollider != null)
@@ -55,7 +63,7 @@ public class KapiKontrol : MonoBehaviour
                 sesKaynagi.PlayOneShot(kapiacses);
             }
         }
-        else
+        else//kapýyý kapat
         {
             hedefRotasyon = kapaliRotasyon;
 
