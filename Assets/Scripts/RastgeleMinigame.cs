@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class RastgeleMinigame : MonoBehaviour
 {
+    [Header("Ses Ayarlarý")]
+    public AudioSource sesKaynagi;
+    public AudioClip tin;
+
     public bool islemTamamlandi = false;
 
     public bool yemek = false;
@@ -57,6 +61,7 @@ public class RastgeleMinigame : MonoBehaviour
     IEnumerator GorevSifir()
     {
         Debug.Log("0. Görev baþladý");
+        sesKaynagi.PlayOneShot(tin);
         yemek = true;
         islemTamamlandi = false;
 
@@ -67,6 +72,7 @@ public class RastgeleMinigame : MonoBehaviour
     IEnumerator GorevBir()
     {
         Debug.Log("1. Görev baþladý");
+        sesKaynagi.PlayOneShot(tin);
         market = true;
         islemTamamlandi = false;
 
@@ -77,6 +83,7 @@ public class RastgeleMinigame : MonoBehaviour
     IEnumerator GorevIki()
     {
         Debug.Log("2. Görev baþladý");
+        sesKaynagi.PlayOneShot(tin);
         oyuncak = true;
         islemTamamlandi = false;
 
@@ -87,6 +94,7 @@ public class RastgeleMinigame : MonoBehaviour
     IEnumerator GorevUc()
     {
         Debug.Log("3. Görev baþladý");
+        sesKaynagi.PlayOneShot(tin);
         bez = true;
         islemTamamlandi = false;
 
