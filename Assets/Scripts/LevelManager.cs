@@ -9,13 +9,15 @@ public class LevelManager : MonoBehaviour
     private AudioSource sesKaynagi;
     private void Awake()
     {
-        if (Instance != null && Instance != this)
+        if (Instance == null)
         {
-            Destroy(gameObject);
-            return;
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-
-        Instance = this;
+        else
+        {
+            Destroy(gameObject); 
+        }
         DontDestroyOnLoad(gameObject);
         sesKaynagi = gameObject.AddComponent<AudioSource>();
     }

@@ -331,17 +331,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338177310}
   m_CullTransparentMesh: 1
---- !u!114 &453461019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1971240948600621594, guid: f24f248b74b948343a8a57d6119164fc, type: 3}
-  m_PrefabInstance: {fileID: 7891871734275142948}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a3b800639444e64ba2d5c1259f903fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1 &970186196
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +696,7 @@ GameObject:
   - component: {fileID: 1816550819}
   - component: {fileID: 1816550818}
   - component: {fileID: 1816550817}
+  - component: {fileID: 1816550820}
   m_Layer: 5
   m_Name: BaslaButon
   m_TagString: Untagged
@@ -777,19 +767,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1816550818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 453461019}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadAnaOyun
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1816550818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +806,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816550815}
   m_CullTransparentMesh: 1
+--- !u!114 &1816550820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816550815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0122b3a09bdd3b14da67d8123fd7bf9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextButton
 --- !u!1 &1971298315
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +967,7 @@ GameObject:
   - component: {fileID: 2027575919}
   - component: {fileID: 2027575918}
   - component: {fileID: 2027575917}
+  - component: {fileID: 2027575920}
   m_Layer: 5
   m_Name: "C\u0131k\u0131sButon"
   m_TagString: Untagged
@@ -1047,19 +1038,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2027575918}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 453461019}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: "OyundanC\u0131k"
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2027575918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,6 +1077,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027575915}
   m_CullTransparentMesh: 1
+--- !u!114 &2027575920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027575915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430ac860344644f41884b2ccc6dff6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: "Assembly-CSharp::C\u0131k\u0131s"
 --- !u!1 &2097292171
 GameObject:
   m_ObjectHideFlags: 0
