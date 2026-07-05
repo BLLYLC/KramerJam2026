@@ -7,6 +7,10 @@ public class YemekMinigameManager : MonoBehaviour
     private float kalanSure;
     public bool oyunAktif = false; 
 
+    [Header("Sans Ayarlari")]
+    public float basariSansBonusu = 15f;
+    public float basarisizlikCezasi = -10f;
+    
     [Header("Oyun Asamalari")]
     public int tavadakiMalzemeSayisi = 0;
     public int toplamSallamaMiktari = 0;
@@ -79,11 +83,11 @@ public class YemekMinigameManager : MonoBehaviour
 
         if (kazanildiMi)
         {
-            minigameSistemi.OyunuKazan();
+            minigameSistemi.OyunuKazan(basariSansBonusu);
         }
         else
         {
-            minigameSistemi.OyunuKaybet();
+            minigameSistemi.OyunuKaybet(basarisizlikCezasi);
         }
     }
 

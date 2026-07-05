@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class MinigameSistemi : MonoBehaviour
 {
-    [Header("Minigame Etki Ayarları")]
-    public float kazanmaEtkisi = 15f;  
-    public float kaybetmeEtkisi = -10f; 
-
-    public void OyunuKazan()
+    public void OyunuKazan(float kazanilanPuan)
     {
-        Debug.Log("Minigame KAZANILDI! Bebeğin şansı artıyor: +" + kazanmaEtkisi);
-        BebekMekanigi.instance.OlasiligiDegistir(kazanmaEtkisi);
+        Debug.Log("Minigame KAZANILDI! Bebeğin şansı artıyor: +" + kazanilanPuan);
+        BebekMekanigi.instance.OlasiligiDegistir(kazanilanPuan);
+        
     }
 
-    public void OyunuKaybet()
+    public void OyunuKaybet(float kaybedilenPuan)
     {
-        Debug.Log("Minigame KAYBEDİLDİ! Bebeğin şansı düşüyor: " + kaybetmeEtkisi);
-        BebekMekanigi.instance.OlasiligiDegistir(kaybetmeEtkisi);
+        Debug.Log("Minigame KAYBEDİLDİ! Bebeğin şansı düşüyor: " + kaybedilenPuan);
+        BebekMekanigi.instance.OlasiligiDegistir(kaybedilenPuan);
+        
     }
 }

@@ -15,13 +15,16 @@ public class BezFirlatma : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         baslangicPozisyonu = transform.position;
-        rb.isKinematic = true;
+        
+        rb.bodyType = RigidbodyType2D.Kinematic; 
     }
 
     public void Sifirla()
     {
         transform.position = baslangicPozisyonu;
-        rb.isKinematic = true;
+        
+        rb.bodyType = RigidbodyType2D.Kinematic;
+        
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         firlatildiMi = false;
@@ -57,7 +60,7 @@ public class BezFirlatma : MonoBehaviour
         surukleniyorMu = false;
         firlatildiMi = true;
 
-        rb.isKinematic = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
         
         Vector3 firlatmaVektoru = baslangicPozisyonu - transform.position;
         rb.AddForce(firlatmaVektoru * firlatmaGucu, ForceMode2D.Impulse);

@@ -11,11 +11,14 @@ public class MarketMinigameManager : MonoBehaviour
     private float kalanSure;
     public bool oyunAktif = false;
 
+    [Header("Sans Ayarlari")]
+    public float basariSansBonusu = 15f;
+    public float basarisizlikCezasi = -10f;
+    
     [Header("Sistem Baglantilari")]
     public GameObject marketMinigameEkrani;
     public MonoBehaviour oyuncuHareketKodu;
     
-    // YENİ HALİ: Artık hem Canvas hem de dünya yazılarını kabul edecek
     public TMP_Text listeYazisi; 
 
     private List<AburCuburTipi> alinacaklar = new List<AburCuburTipi>();
@@ -129,11 +132,11 @@ public class MarketMinigameManager : MonoBehaviour
 
         if (kazanildiMi)
         {
-            minigameSistemi.OyunuKazan();
+            minigameSistemi.OyunuKazan(basariSansBonusu);
         }
         else
         {
-            minigameSistemi.OyunuKaybet();
+            minigameSistemi.OyunuKaybet(basarisizlikCezasi);
         }
     }
 }

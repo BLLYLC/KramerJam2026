@@ -149,11 +149,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.28
+      value: -4.1
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1599326
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.z
@@ -310,6 +310,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 5754588530107125282, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
+      propertyPath: oyuncuHareketKodu
+      value: 
+      objectReference: {fileID: 2141178825}
     - target: {fileID: 6182930141363190390, guid: ad4319d47147d6c4d9670f0f73c15a79, type: 3}
       propertyPath: m_Name
       value: OyuncakMinigame
@@ -966,6 +970,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4516870483618566902, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: oyuncuHareketKodu
+      value: 
+      objectReference: {fileID: 2141178825}
     - target: {fileID: 6100980377724504128, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.86
@@ -1120,8 +1128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db488042fa795724fbdfcea8de351785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameSistemi
-  kazanmaEtkisi: 15
-  kaybetmeEtkisi: -10
 --- !u!1 &1264239199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,17 +1586,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 1428457564528250094, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: oyuncuHareketKodu
+      value: 
+      objectReference: {fileID: 2141178825}
+    - target: {fileID: 1532452918465545072, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5080195903109301250, guid: 8728aa7901b8c064da7de00fcd4fb45b, type: 3}
     - target: {fileID: 1532452918465545072, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1532452918465545072, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1532452918465545072, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2157229718249593078, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Size.y
@@ -1612,6 +1626,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3361980486188024282, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361980486188024282, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361980486188024282, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703896750404924033, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703896750404924033, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3923292971293972511, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.024
@@ -1619,6 +1653,18 @@ PrefabInstance:
     - target: {fileID: 3923292971293972511, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169952575925500961, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169952575925500961, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169952575925500961, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4304450712238364398, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1762,23 +1808,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8490610172521392332, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.874
+      value: 1.0925
       objectReference: {fileID: 0}
     - target: {fileID: 8490610172521392332, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.746
+      value: 0.9325
       objectReference: {fileID: 0}
     - target: {fileID: 8495409704059177168, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 866c05fef84ca1f439ea57b2c21e1ce3, type: 3}
+    - target: {fileID: 8495409704059177168, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8495409704059177168, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8495409704059177168, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614958358444743353, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614958358444743353, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.195
       objectReference: {fileID: 0}
     - target: {fileID: 8922616387231183903, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
       propertyPath: m_Name
@@ -1791,7 +1849,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3883697036377118637, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 01f0e0543f00ba545b71f02356212366, type: 3}
 --- !u!1 &2135039329
 GameObject:

@@ -6,6 +6,9 @@ public class BezMinigameManager : MonoBehaviour
     public float basariSansBonusu = 20f;
     public float basarisizlikCezasi = -15f;
 
+    [Header("Ortak Sistem Baglantisi")]
+    public MinigameSistemi genelSistem;
+
     [Header("Sistem Ayarlari")]
     public GameObject minigameEkrani;
     public MonoBehaviour oyuncuHareketKodu;
@@ -32,15 +35,15 @@ public class BezMinigameManager : MonoBehaviour
         if (minigameEkrani != null) minigameEkrani.SetActive(false);
         if (oyuncuHareketKodu != null) oyuncuHareketKodu.enabled = true;
 
-        if (BebekMekanigi.instance != null)
+        if (genelSistem != null)
         {
             if (kazanildiMi)
             {
-                BebekMekanigi.instance.OlasiligiDegistir(basariSansBonusu);
+                genelSistem.OyunuKazan(basariSansBonusu);
             }
             else
             {
-                BebekMekanigi.instance.OlasiligiDegistir(basarisizlikCezasi);
+                genelSistem.OyunuKaybet(basarisizlikCezasi);
             }
         }
     }
