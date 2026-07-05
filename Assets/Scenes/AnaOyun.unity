@@ -195,6 +195,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.32
       objectReference: {fileID: 0}
+    - target: {fileID: 6378185859540618452, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
+      propertyPath: tavaPrefab
+      value: 
+      objectReference: {fileID: 6625981776029840309, guid: f97f885f5a12ded4f993b5bb9ee8f974, type: 3}
+    - target: {fileID: 6378185859540618452, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
+      propertyPath: karakterHareket
+      value: 
+      objectReference: {fileID: 2141178825}
+    - target: {fileID: 6378185859540618452, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
+      propertyPath: tavaSpawnNoktasi
+      value: 
+      objectReference: {fileID: 858768255}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1031,6 +1043,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8035781072101833329, guid: 2814b81710f6f0c4e8da3978f98439ea, type: 3}
   m_PrefabInstance: {fileID: 1061209256}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &858768255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7641816684373103919, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
+  m_PrefabInstance: {fileID: 63913996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &859652548 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3185384344586038430, guid: b3ff08084c070e14d9881e566087c796, type: 3}
@@ -1519,6 +1536,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 2550940036977679083, guid: 209e98fe60c39cd4a81206b19d108df7, type: 3}
+    - target: {fileID: 941873937865132749, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: saniyelikHasar
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2668368511203706498, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_Name
       value: dusman_0
@@ -1570,6 +1591,10 @@ PrefabInstance:
     - target: {fileID: 7863649684464299406, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661812053481803914, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: azamiCan
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2130,6 +2155,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 941873937865132749, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: takipHizi
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 941873937865132749, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: saniyelikHasar
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2668368511203706498, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_Name
       value: dusman_0
@@ -2173,6 +2206,10 @@ PrefabInstance:
     - target: {fileID: 3058837610125421451, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661812053481803914, guid: e1ef742664f9a614085942cb97aa37b2, type: 3}
+      propertyPath: azamiCan
+      value: 80
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
