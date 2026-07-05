@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &649502213 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4878441587352419386, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
-  m_PrefabInstance: {fileID: 964048830}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27c5f1cd44d00ba42b90c3aeff638980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::KarakterHareket
 --- !u!1 &863861960
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,11 +216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.28
+      value: 11.44
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.22
+      value: -3.95
       objectReference: {fileID: 0}
     - target: {fileID: 1546993380760686588, guid: 0be5a9824571f7a4daadf9183c178143, type: 3}
       propertyPath: m_LocalPosition.z
@@ -411,7 +400,7 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!1001 &855401395617064898
+--- !u!1001 &3363375408974382432
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -419,59 +408,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4516870483618566902, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
-      propertyPath: oyuncuHareketKodu
-      value: 
-      objectReference: {fileID: 649502213}
-    - target: {fileID: 6582855709875531139, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
-      propertyPath: m_Name
-      value: BezPaket
-      objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08756
+      value: 5.26
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.69633
+      value: -2.28
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9120629706084653699, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691319970229560074, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_Name
+      value: "BebeninOyunG\xF6rseli"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4caa249268d36d14c8ef254da1a6befc, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+--- !u!114 &3363375408974382433 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7471920222499239240, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+  m_PrefabInstance: {fileID: 3363375408974382432}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de0dbf143622f64794fcb20c4f6045d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BebekGorselYonetici
 --- !u!1001 &4225162793931511579
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -483,6 +479,62 @@ PrefabInstance:
     - target: {fileID: 2455439311079369347, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
       propertyPath: m_Name
       value: BebekSistem
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3363375408974382433}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3363375408974382433}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BasariAnimasyonunuBaslat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HataAnimasyonunuBaslat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BebekGorselYonetici, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BebekGorselYonetici, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7799445147514774618, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -537,4 +589,4 @@ SceneRoots:
   - {fileID: 4225162793931511579}
   - {fileID: 964048830}
   - {fileID: 863861963}
-  - {fileID: 855401395617064898}
+  - {fileID: 3363375408974382432}

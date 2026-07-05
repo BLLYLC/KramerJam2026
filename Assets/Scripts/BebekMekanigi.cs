@@ -30,34 +30,20 @@ public class BebekMekanigi : MonoBehaviour
     public bool dusmanBekleniyor = false;
 
     [Header("Dusman Sistemi")]
-    public List <DusmanDavranisi> baglidusmanlar = new List<DusmanDavranisi>(); 
+    public List<DusmanDavranisi> baglidusmanlar = new List<DusmanDavranisi>(); 
 
     [Header("Oyun Ici Tetikleyiciler")]
-    public UnityEvent DogruKoyuldugunda;
-    public UnityEvent YanlisKoyuldugunda;
-    public UnityEvent OyunKazanildiginda;
+    public UnityEvent DogruKoyuldugunda = new UnityEvent();
+    public UnityEvent YanlisKoyuldugunda = new UnityEvent();
+    public UnityEvent OyunKazanildiginda = new UnityEvent();
 
-    [SerializeField] private GameObject BEBEGorsel;
-    [SerializeField] private Sprite BEBE_idle; 
-    [SerializeField] private Sprite BEBE_angry;
-    private SpriteRenderer BEBESR;
-    private float bebeSpriteSuresi = 1f;
-    private float bebeSpriteSayac = 0f;
     private void Awake() 
     { 
         instance = this; 
     }
-    private void Start()
-    {
-        BEBESR = BEBEGorsel.GetComponent<SpriteRenderer>();
-    }
+
     private void Update()
     {
-        bebeSpriteSayac += Time.deltaTime;
-        if (BEBESR.sprite != BEBE_idle && bebeSpriteSayac > bebeSpriteSuresi) { 
-            BEBESR.sprite = BEBE_idle;
-        }
-
         if (oyunBitti || dusmanBekleniyor) return;
 
         sansDusmeSayaci += Time.deltaTime;
@@ -96,11 +82,7 @@ public class BebekMekanigi : MonoBehaviour
         {
             toplamYanlisSayisi++;
             Debug.Log("HATA! Bebek sekli koyamadi. Toplam Yanlis: " + toplamYanlisSayisi);
-            YanlisKoyuldugunda.Invoke();
-            
-            BEBESR.sprite = BEBE_angry;
-            bebeSpriteSayac = 0f;
-
+            YanlisKoyuldugunda.Invoke(); 
 
             if (toplamYanlisSayisi % 3 == 0)
             {
@@ -115,7 +97,7 @@ public class BebekMekanigi : MonoBehaviour
         dusmanBekleniyor = true;
         foreach (DusmanDavranisi dusman in baglidusmanlar)
         {
-            if (baglidusmanlar != null)
+            if (dusman != null)
             {
                 dusman.YenidenCanlandir();
             }
@@ -124,7 +106,6 @@ public class BebekMekanigi : MonoBehaviour
                 Debug.LogWarning("DIKKAT: Bagli dusman atanmamis ama sistem kilitlendi!");
             }
         }
-        
     }
 
     public void DusmanYenildi()
@@ -134,7 +115,11 @@ public class BebekMekanigi : MonoBehaviour
         mevcutSekil = 0;          
         hamleSayaci = 0f;         
         sansDusmeSayaci = 0f;
-        BebekGorselYonetici.instance.GorselleriSifirla();
+
+        if (BebekGorselYonetici.instance != null)
+        {
+            BebekGorselYonetici.instance.GorselleriSifirla();
+        }
     }
 
     public void OlasiligiDegistir(float miktar)
