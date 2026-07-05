@@ -5,6 +5,8 @@ public class BezTetikleyici : MonoBehaviour
     public BezMinigameManager minigameManager;
     private bool oyuncuAlandaMi = false;
 
+    public KarakterDovus oyuncununDovusScripti;
+
     private void Update()
     {
         if (oyuncuAlandaMi && Input.GetKeyDown(KeyCode.E))
@@ -17,6 +19,7 @@ public class BezTetikleyici : MonoBehaviour
                 {
                     Debug.Log("Sistem musait, oyun baslatiliyor...");
                     minigameManager.OyunuBaslat();
+                    oyuncununDovusScripti.saldirabilirMi = false;
                 }
                 else
                 {

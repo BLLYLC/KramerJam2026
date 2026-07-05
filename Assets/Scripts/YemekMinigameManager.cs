@@ -5,7 +5,7 @@ public class YemekMinigameManager : MonoBehaviour
     [Header("Zaman Ayarlari")]
     public float verilenSure = 10f;
     private float kalanSure;
-    public bool oyunAktif = false; 
+    public bool oyunAktif = false;
 
     [Header("Sans Ayarlari")]
     public float basariSansBonusu = 15f;

@@ -4,7 +4,9 @@ public class MutfakTetikleyici : MonoBehaviour
 {
     [Header("Bağlanacak Objeler")]
     public GameObject yemekMinigameEkrani; 
-    public YemekMinigameManager minigameManager; 
+    public YemekMinigameManager minigameManager;
+
+    public KarakterDovus oyuncununDovusScripti;
 
     private bool oyuncuIceride = false;
 
@@ -32,6 +34,8 @@ public class MutfakTetikleyici : MonoBehaviour
             yemekMinigameEkrani.SetActive(true);
             
             minigameManager.OyunuBaslat();
+
+            oyuncununDovusScripti.saldirabilirMi = false;
         }
     }
 }

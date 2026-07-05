@@ -14,6 +14,8 @@ public class BezMinigameManager : MonoBehaviour
     public MonoBehaviour oyuncuHareketKodu;
     public BezFirlatma bezKodu;
 
+    public KarakterDovus oyuncununDovusScripti;
+
     public bool oyunAktif = false;
 
     public void OyunuBaslat()
