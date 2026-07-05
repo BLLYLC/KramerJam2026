@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using TMPro;
+using System.Collections;
 
 public class BebekMekanigi : MonoBehaviour
 {
@@ -15,8 +17,15 @@ public class BebekMekanigi : MonoBehaviour
 
     [Header("Oyun Asamalari")]
     public int mevcutSekil = 0;
-    [SerializeField]public int kazanmakIcinGerekenSekil = 8;
+    [SerializeField] public int kazanmakIcinGerekenSekil = 8;
     public int toplamYanlisSayisi = 0;
+    public int kurtarilmaSayisi = 0;
+
+    [Header("Arayuz Ayarlari")]
+    public TMP_Text hakYazisi;
+    public TMP_Text kurtarilmaYazisi;
+    public TMP_Text asamaYazisi;
+    public TMP_Text durumBildirimYazisi; 
 
     [Header("Zamanlayicilar")]
     public float hamleSuresi = 5f;
@@ -37,27 +46,44 @@ public class BebekMekanigi : MonoBehaviour
     public UnityEvent YanlisKoyuldugunda = new UnityEvent();
     public UnityEvent OyunKazanildiginda = new UnityEvent();
 
+    [Header("Gorsel Ayarlar")]
     [SerializeField] private GameObject BEBEGorsel;
     [SerializeField] private Sprite BEBEidleSprite;
     [SerializeField] private Sprite BEBEkızgınSprite;
     private SpriteRenderer BEBESR;
-    private float bebeSayac=0f;
+    private float bebeSayac = 0f;
     private float bebeAnimSure = 1f;
+
+    private Coroutine bildirimRoutine; 
 
     private void Awake() 
     { 
         instance = this; 
     }
+
     private void Start()
     {
-        BEBESR = BEBEGorsel.GetComponent<SpriteRenderer>();
+        if (BEBEGorsel != null)
+        {
+            BEBESR = BEBEGorsel.GetComponent<SpriteRenderer>();
+        }
+        
+        if (durumBildirimYazisi != null)
+        {
+            durumBildirimYazisi.text = "";
+        }
+        
+        ArayuzuGuncelle();
     }
+
     private void Update()
     {
         bebeSayac += Time.deltaTime;
-        if (BEBESR != BEBEidleSprite && bebeSayac > bebeAnimSure) {
+        if (BEBESR != null && BEBESR.sprite != BEBEidleSprite && bebeSayac > bebeAnimSure) 
+        {
             BEBESR.sprite = BEBEidleSprite;
         }
+
         if (oyunBitti || dusmanBekleniyor) return;
 
         sansDusmeSayaci += Time.deltaTime;
@@ -86,6 +112,8 @@ public class BebekMekanigi : MonoBehaviour
             mevcutSekil++;
             Debug.Log("BASARILI! Bebek " + mevcutSekil + ". sekli koydu.");
             DogruKoyuldugunda.Invoke(); 
+            
+            EkranaBildirimYaz("BASARILI!", Color.green);
 
             if (mevcutSekil >= kazanmakIcinGerekenSekil)
             {
@@ -97,14 +125,41 @@ public class BebekMekanigi : MonoBehaviour
             toplamYanlisSayisi++;
             Debug.Log("HATA! Bebek sekli koyamadi. Toplam Yanlis: " + toplamYanlisSayisi);
             YanlisKoyuldugunda.Invoke();
+            
+            EkranaBildirimYaz("BASARISIZ DENEME", Color.red);
 
-            BEBESR.sprite= BEBEkızgınSprite;
+            if (BEBESR != null)
+            {
+                BEBESR.sprite = BEBEkızgınSprite;
+            }
             bebeSayac = 0f;
+            
             if (toplamYanlisSayisi % 3 == 0)
             {
                 DusmanCagirVeBekle();
             }
         }
+
+        ArayuzuGuncelle();
+    }
+    
+    private void EkranaBildirimYaz(string mesaj, Color renk)
+    {
+        if (durumBildirimYazisi == null) return;
+
+        if (bildirimRoutine != null)
+        {
+            StopCoroutine(bildirimRoutine);
+        }
+        bildirimRoutine = StartCoroutine(BildirimGosterRoutine(mesaj, renk));
+    }
+
+    private IEnumerator BildirimGosterRoutine(string mesaj, Color renk)
+    {
+        durumBildirimYazisi.text = mesaj;
+        durumBildirimYazisi.color = renk;
+        yield return new WaitForSeconds(1.5f);
+        durumBildirimYazisi.text = "";
     }
 
     private void DusmanCagirVeBekle()
@@ -122,6 +177,8 @@ public class BebekMekanigi : MonoBehaviour
                 Debug.LogWarning("DIKKAT: Bagli dusman atanmamis ama sistem kilitlendi!");
             }
         }
+        
+        ArayuzuGuncelle();
     }
 
     public void DusmanYenildi()
@@ -131,11 +188,14 @@ public class BebekMekanigi : MonoBehaviour
         mevcutSekil = 0;          
         hamleSayaci = 0f;         
         sansDusmeSayaci = 0f;
+        kurtarilmaSayisi++;
 
         if (BebekGorselYonetici.instance != null)
         {
             BebekGorselYonetici.instance.GorselleriSifirla();
         }
+        
+        ArayuzuGuncelle();
     }
 
     public void OlasiligiDegistir(float miktar)
@@ -150,5 +210,49 @@ public class BebekMekanigi : MonoBehaviour
         Debug.Log("MUKEMMEL! Bebek tüm sekilleri bitirdi ve OYUN KAZANILDI!");
         oyunBitti = true;
         OyunKazanildiginda.Invoke();
+        
+        EkranaBildirimYaz("OYUN KAZANILDI!", Color.yellow);
+        
+        ArayuzuGuncelle();
+    }
+
+    public void ArayuzuGuncelle()
+    {
+        if (asamaYazisi != null)
+        {
+            asamaYazisi.text = "Asama: " + mevcutSekil + " / " + kazanmakIcinGerekenSekil;
+        }
+
+        if (kurtarilmaYazisi != null)
+        {
+            kurtarilmaYazisi.text = "Kurtarilma: " + kurtarilmaSayisi;
+        }
+
+        if (hakYazisi != null)
+        {
+            int kalanHak;
+            if (dusmanBekleniyor)
+            {
+                kalanHak = 0;
+            }
+            else
+            {
+                int mod = toplamYanlisSayisi % 3;
+                if (mod == 0)
+                {
+                    kalanHak = 3;
+                }
+                else if (mod == 1)
+                {
+                    kalanHak = 2;
+                }
+                else
+                {
+                    kalanHak = 1;
+                }
+            }
+            
+            hakYazisi.text = "Hak: " + kalanHak + " / 3";
+        }
     }
 }
