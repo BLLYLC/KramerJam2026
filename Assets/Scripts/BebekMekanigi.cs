@@ -222,6 +222,7 @@ public class BebekMekanigi : MonoBehaviour
         Debug.Log("MUKEMMEL! Bebek tüm sekilleri bitirdi ve OYUN KAZANILDI!");
         oyunBitti = true;
         OyunKazanildiginda.Invoke();
+        LevelManager.Instance.LoadOyunKazanma();
         
         EkranaBildirimYaz("OYUN KAZANILDI!", Color.yellow);
         
