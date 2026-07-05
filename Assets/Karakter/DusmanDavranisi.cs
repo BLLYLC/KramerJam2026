@@ -73,6 +73,7 @@ public class DusmanDavranisi : MonoBehaviour
         transform.localPosition = baslangicPozisyonu;
         mevcutCan = azamiCan;
         gameObject.SetActive(true);
+        spriteRenderer.color = Color.white;
         Debug.Log(gameObject.name + " yeniden canland�");
     }
 }
