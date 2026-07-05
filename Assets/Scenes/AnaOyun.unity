@@ -685,6 +685,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.1825
       objectReference: {fileID: 0}
+    - target: {fileID: 5904367017030312952, guid: b3ff08084c070e14d9881e566087c796, type: 3}
+      propertyPath: oyuncununDovusScripti
+      value: 
+      objectReference: {fileID: 2141178827}
     - target: {fileID: 6352986324318237182, guid: b3ff08084c070e14d9881e566087c796, type: 3}
       propertyPath: oyuncuHareketKodu
       value: 
@@ -1326,6 +1330,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 261906251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &938809995
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235524932711604119, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6691319970229560074, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_Name
+      value: "BebeninOyunG\xF6rseli"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7102109350465250722, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
 --- !u!1001 &968869271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1684,6 +1749,62 @@ PrefabInstance:
       propertyPath: 'baglidusmanlar.Array.data[1]'
       value: 
       objectReference: {fileID: 23413427}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1720191428}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1720191428}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BasariAnimasyonunuBaslat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HataAnimasyonunuBaslat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BebekGorselYonetici, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BebekGorselYonetici, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: DogruKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6300484374774552325, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
+      propertyPath: YanlisKoyuldugunda.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7799445147514774618, guid: e7d81fa376d34a447a8abb1d0eb17e9b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.72848
@@ -1868,6 +1989,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 163741686535110483, guid: b3ff08084c070e14d9881e566087c796, type: 3}
   m_PrefabInstance: {fileID: 157974090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1720191428 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7471920222499239240, guid: 73dd30b58dc9f474badac03a941a4b74, type: 3}
+  m_PrefabInstance: {fileID: 938809995}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0de0dbf143622f64794fcb20c4f6045d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BebekGorselYonetici
 --- !u!1 &1801586982
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,3 +2606,4 @@ SceneRoots:
   - {fileID: 2107742822}
   - {fileID: 142291081}
   - {fileID: 968869271}
+  - {fileID: 938809995}
