@@ -1221,6 +1221,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7826652993520240776, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7159951069815360940, guid: 4460c4e5b5e74cf488ac0cdf84d30d96, type: 3}
+    - target: {fileID: 7826652993520240776, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826652993520240776, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7826652993520240776, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8914071824314814429, guid: f4539b7cf23f6a2488b98ef2726cfdf1, type: 3}
       propertyPath: oyuncununDovusScripti
       value: 
